@@ -1,0 +1,70 @@
+.list {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  gap: 20px;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.main__list {
+  width: calc(100% / 6 - 17px);
+}
+
+.list_item {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.list_item:nth-child(6n) {
+  margin-right: 0;
+  /* 각 줄의 마지막 항목은 오른쪽 마진 제거 */
+}
+
+.list_image {
+  aspect-ratio: 1;
+  object-fit: cover;
+  border-radius: 8px;
+  position: relative;
+}
+
+.list_text {
+  margin-top: 10px;
+}
+
+.list_title,
+.list_price,
+.list_availability {
+  font-size: 15px;
+  color: #000;
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.list_host {
+  font-size: 15px;
+  color: #555;
+  display: block;
+}
+
+em {
+  font-weight: bold;
+  font-style: normal;
+}
+
+.prewlist {
+  font-size: 32px;
+  font-weight: bold;
+  width: 90%;
+  margin: 0 auto;
+  justify-content: left;
+  margin-top: 30px;
+  margin-bottom: 20px;
+}

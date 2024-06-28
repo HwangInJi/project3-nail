@@ -1,0 +1,63 @@
+#header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  // padding: 20px 0px;
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 10px;
+}
+
+.logo {
+  color: #ff385c;
+  font-size: 24px;
+  font-family: var(--fontL);
+}
+
+.head_span {
+  display: flex;
+  gap: 20px;
+}
+
+.head_01,
+.head_02 {
+  color: #222222;
+  font-size: 16px;
+}
+
+.right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.right p {
+  margin-right: 20px;
+}
+
+.space {
+  height: 16px;
+  width: 16px;
+}
+
+.my {
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+  border: 1px solid #ccc;
+  border-radius: 100px;
+  gap: 1rem;
+}
+
+.my_menu,
+.my_user {
+  height: 20px;
+  width: 20px;
+  stroke: currentcolor;
+  stroke-width: 3;
+}
+
+.my_user {
+  height: 30px;
+  width: 30px;
+}
