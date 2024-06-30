@@ -1,33 +1,173 @@
 .detail_main {
+  padding: 20px;
   width: 60%;
   margin: 0 auto;
 }
 
+.detail_top {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+}
+
+.detail_top h1 {
+  margin-bottom: 20px;
+}
+
+.save {
+  display: flex;
+  gap: 10px;
+}
+
+.save>p {
+  font-size: 14px;
+}
+
+.save>img {
+  width: 20px;
+  height: 20px;
+}
+
+.gallery-container {
+  display: flex;
+  gap: 10px;
+}
+
+.gallery-item-large {
+  flex: 1;
+}
+
 .gallery {
-  display: grid;
-  grid-template-columns: 2fr 1fr 1fr;
-  grid-template-rows: repeat(2, 1fr);
+  display: flex;
+  flex-wrap: wrap;
+  width: 50%;
   gap: 10px;
 }
 
 .gallery-item {
-  position: relative;
-  width: 100%;
-  overflow: hidden;
+  flex: 1 1 calc(50% - 10px);
+  aspect-ratio: 1;
 }
 
-.gallery-item-large {
-  grid-row: span 2;
-  grid-column: span 2;
-}
-
-.gallery-item-small {
-  grid-column: span 1;
-}
-
+.gallery-item-large img,
 .gallery-item img {
   width: 100%;
   height: 100%;
+  display: block;
+  border-radius: 4px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   object-fit: cover;
+}
+
+// left
+.left {
+  width: 50%;
+}
+
+.detail_title {
+  margin-top: 20px;
+  border-bottom: 1px solid #ccc;
+}
+
+.detail_title p {
+  margin-bottom: 20px;
+}
+
+.detail_info {
+  display: flex;
+  margin-top: 20px;
+  gap: 20px;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.profile1>img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.profile2>p {
+  font-size: 14px;
+}
+
+.details {
+  border-top: 1px solid #ccc;
+  margin-bottom: 20px;
+}
+
+.detail_info2 {
+  display: flex;
+  gap: 20px;
+}
+
+.info2_icon {
+  margin-top: 20px;
+  width: 24px;
+  height: 24px;
+  margin-left: 10px;
+}
+
+.info2 {
+  margin-top: 20px;
+  margin-left: 5px;
+}
+
+.info2>p {
+  font-size: 14px;
+}
+
+.info_text {
+  border-top: 1px solid #ccc;
+}
+
+.info_text>p {
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+
+.info_place {
+  border-top: 1px solid #ccc;
+  margin-bottom: 20px;
+}
+
+.info_place>h2 {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.info_place .place {
+  display: flex;
+  gap: 15px;
+}
+
+.info_place .place section>img {
   border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.info_place .place section>h3 {
+  font-size: 16px;
+}
+
+.info_place .place section>p {
+  font-size: 14px;
+}
+
+// right
+
+.map {
+  border-top: 1px solid #ccc;
+}
+
+.map h2 {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.map>img {
+  object-fit: cover;
+  width: 100%;
+  height: 50vh;
+  border-radius: 10px;
 }
