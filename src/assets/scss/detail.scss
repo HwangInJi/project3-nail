@@ -59,6 +59,12 @@
   object-fit: cover;
 }
 
+.detail_mid {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
 // left
 .left {
   width: 50%;
@@ -155,6 +161,81 @@
 }
 
 // right
+.right {
+  display: block;
+  width: 45%;
+  height: inherit;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  position: relative;
+  padding-bottom: 70px;
+  /* 버튼 높이만큼 패딩 추가 */
+}
+
+.review-section {
+  width: 500px;
+  margin: 20px auto;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  background-color: #fff;
+  padding: 20px;
+}
+
+.review {
+  border-bottom: 1px solid #eee;
+  padding: 10px 0;
+  margin-bottom: 10px;
+}
+
+.review:last-child {
+  border-bottom: none;
+}
+
+.review>img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  float: left;
+  margin-right: 10px;
+}
+
+.review .username {
+  font-weight: bold;
+  font-size: 14px;
+  margin: 0;
+}
+
+.review .age-gender {
+  font-size: 12px;
+  color: #888;
+  margin: 0;
+}
+
+.review .content {
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+.join-button {
+  width: 40%;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  background: #ff385c;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.join-button:hover {
+  opacity: 0.9;
+}
 
 .map {
   border-top: 1px solid #ccc;
