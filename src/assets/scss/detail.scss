@@ -66,8 +66,9 @@
 }
 
 // left
-.left {
+.detail_left {
   width: 50%;
+  height: 100vh;
 }
 
 .detail_title {
@@ -161,17 +162,24 @@
 }
 
 // right
-.right {
+.detail_right {
   display: block;
   width: 45%;
-  height: inherit;
+  height: 100vh;
   border: 1px solid #ccc;
   border-radius: 8px;
   margin-top: 20px;
   margin-bottom: 20px;
   position: relative;
-  padding-bottom: 70px;
-  /* 버튼 높이만큼 패딩 추가 */
+  padding-bottom: 40px;
+  overflow: hidden;
+  overflow-y: scroll;
+  padding-right: 17px;
+  box-sizing: content-box;
+}
+
+.detail_right::-webkit-scrollbar {
+  width: 0;
 }
 
 .review-section {
@@ -218,7 +226,7 @@
   font-size: 14px;
 }
 
-.join-button {
+.review-button {
   width: 40%;
   padding: 10px;
   border: none;
@@ -227,13 +235,13 @@
   color: #fff;
   font-size: 16px;
   cursor: pointer;
-  position: absolute;
   bottom: 20px;
   left: 50%;
-  transform: translateX(-50%);
+  transform: translateX(70%);
+  margin-top: 20px;
 }
 
-.join-button:hover {
+.review-button:hover {
   opacity: 0.9;
 }
 

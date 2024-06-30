@@ -3,7 +3,7 @@ import Header from "@/components/Header";
 import Search from "@/components/Search";
 import Footer from "@/components/Footer";
 
-export default function about() {
+export default function About() {
   return (
     <>
       <Header />
@@ -37,14 +37,10 @@ export default function about() {
         </div>
 
         <div className="detail_mid">
-          <div className="left">
+          <div className="detail_left">
             <div className="detail_title">
-              <h2>
-                애비퀴우, 뉴멕시코, 미국
-              </h2>
-              <p>
-                최대 인원 4명침실 1개침대 2개욕실 1개
-              </p>
+              <h2>애비퀴우, 뉴멕시코, 미국</h2>
+              <p>최대 인원 4명침실 1개침대 2개욕실 1개</p>
             </div>
 
             <div className="detail_info">
@@ -55,9 +51,7 @@ export default function about() {
                 <h3>
                   <em> 호스트: Carl Fredricksen 님</em>
                 </h3>
-                <p>
-                  은퇴한 풍선 판매원
-                </p>
+                <p>은퇴한 풍선 판매원</p>
               </div>
             </div>
 
@@ -67,11 +61,10 @@ export default function about() {
                   <img src="/img/room.jpg" alt="프로필이미지" />
                 </div>
                 <div className="info2">
-                  <h3>
-                    수많은 풍선이 달린 저희 집에서 숙박해 보세요
-                  </h3>
+                  <h3>수많은 풍선이 달린 저희 집에서 숙박해 보세요</h3>
                   <p>
-                    그거 아세요? 무려 8,000개가 넘는 풍선이 저희 집 지붕 위에 매달려 있답니다!
+                    그거 아세요? 무려 8,000개가 넘는 풍선이 저희 집 지붕 위에
+                    매달려 있답니다!
                   </p>
                 </div>
               </div>
@@ -81,11 +74,10 @@ export default function about() {
                   <img src="/img/park.jpg" alt="프로필이미지" />
                 </div>
                 <div className="info2">
-                  <h3>
-                    야생으로 떠나는 모험
-                  </h3>
+                  <h3>야생으로 떠나는 모험</h3>
                   <p>
-                    야생으로 떠나 탐험가 배지를 획득하세요. 이제 저는 쉴 때가 된 것 같아요.
+                    야생으로 떠나 탐험가 배지를 획득하세요. 이제 저는 쉴 때가
+                    된 것 같아요.
                   </p>
                 </div>
               </div>
@@ -95,12 +87,8 @@ export default function about() {
                   <img src="/img/park.jpg" alt="프로필이미지" />
                 </div>
                 <div className="info2">
-                  <h3>
-                    야생으로 떠나는 모험
-                  </h3>
-                  <p>
-                    엘리의 고글을 구경하고 모험 일지와 러브레터를 읽어보세요.
-                  </p>
+                  <h3>야생으로 떠나는 모험</h3>
+                  <p>엘리의 고글을 구경하고 모험 일지와 러브레터를 읽어보세요.</p>
                 </div>
               </div>
 
@@ -109,11 +97,10 @@ export default function about() {
                   <img src="/img/park.jpg" alt="프로필이미지" />
                 </div>
                 <div className="info2">
-                  <h3>
-                    하늘을 올려다보는 것도 잊지 마세요
-                  </h3>
+                  <h3>하늘을 올려다보는 것도 잊지 마세요</h3>
                   <p>
-                    모험에서 돌아오면 집이 하늘에 둥둥 떠다니는 풍경이 여러분을 맞이할 거예요.
+                    모험에서 돌아오면 집이 하늘에 둥둥 떠다니는 풍경이 여러분을
+                    맞이할 거예요.
                   </p>
                 </div>
               </div>
@@ -121,7 +108,14 @@ export default function about() {
 
             <div className="info_text">
               <p>
-                항상 방문객을 반기지는 않아요. 하지만 더그와 저만 남고 보니 누군가 방문하는 것도 꽤 좋을 거란 생각을 하게 되었습니다. 그래서 여러분을 저희집에 초대합니다. 제 아내 엘리와 함께 손수 꾸민 곳이죠. 이곳은 제 인생 최고의 모험을 경험한 곳이예요. 인생 최고의 모험은 언제나 사랑하는 이와 함께하는 시간이라는 것을 배우게 된 곳이기도 하지요. 친구들과 함께 이곳에 머무르면서 나만의 모험 연대기를 시작해 보세요. 떠나기 전 풍선집이 하늘 높이 날아가는 진풍경도 구경하실 수 있답니다.
+                항상 방문객을 반기지는 않아요. 하지만 더그와 저만 남고 보니
+                누군가 방문하는 것도 꽤 좋을 거란 생각을 하게 되었습니다. 그래서
+                여러분을 저희집에 초대합니다. 제 아내 엘리와 함께 손수 꾸민
+                곳이죠. 이곳은 제 인생 최고의 모험을 경험한 곳이예요. 인생 최고의
+                모험은 언제나 사랑하는 이와 함께하는 시간이라는 것을 배우게 된
+                곳이기도 하지요. 친구들과 함께 이곳에 머무르면서 나만의 모험
+                연대기를 시작해 보세요. 떠나기 전 풍선집이 하늘 높이 날아가는
+                진풍경도 구경하실 수 있답니다.
               </p>
             </div>
 
@@ -142,60 +136,94 @@ export default function about() {
             </div>
           </div>
 
-          <div className="right">
-            <div class="review-section">
-              <div class="review">
+          <div className="detail_right">
+            <div className="review-section">
+              <div className="review">
                 <img src="/img/profile.jpeg" alt="프로필 사진" />
-                <div class="review_info">
-                  <p class="username">또흔</p>
-                  <p class="age-gender">31세/경기도 안산시</p>
-                  <p class="content">
-                    저는 아이라이너와 마스카라가 굉장히 잘 번지는 눈을 갖고 있어서 언더에 아이라이너를 칠한다던지 언더래쉬에 마스카라를 바른다는 건 정말 상상하지도 못할 일이라고 생각하고 키스미 브라운 마스카라도 번지는 눈을 갖고 있습니다. 마스카라 새로 사려고 알아보다가 제가 좋아하는 유튜브어쩌고 저쩌고
+                <div className="review_info">
+                  <p className="stars">★★★★☆</p>
+                  <p className="username">또흔</p>
+                  <p className="age-gender">31세/경기도 안산시</p>
+                  <p className="content">
+                    저는 아이라이너와 마스카라가 굉장히 잘 번지는 눈을 갖고 있어서
+                    언더에 아이라이너를 칠한다던지 언더래쉬에 마스카라를 바른다는
+                    건 정말 상상하지도 못할 일이라고 생각하고 키스미 브라운
+                    마스카라도 번지는 눈을 갖고 있습니다. 마스카라 새로 사려고
+                    알아보다가 제가 좋아하는 유튜브어쩌고 저쩌고
                   </p>
                 </div>
               </div>
             </div>
 
-            <div class="review-section">
-              <div class="review">
+            <div className="review-section">
+              <div className="review">
                 <img src="/img/profile.jpeg" alt="프로필 사진" />
-                <div class="review_info">
-                  <p class="username">또흔</p>
-                  <p class="age-gender">31세/서울시 남양주</p>
-                  <p class="content">
-                    저는 아이라이너와 마스카라가 굉장히 잘 번지는 눈을 갖고 있어서 언더에 아이라이너를 칠한다던지 언더래쉬에 마스카라를 바른다는 건 정말 상상하지도 못할 일이라고 생각하고 키스미 브라운 마스카라도 번지는 눈을 갖고 있습니다.
+                <div className="review_info">
+                  <p className="stars">★★★☆☆</p>
+                  <p className="username">또흔</p>
+                  <p className="age-gender">31세/서울시 남양주</p>
+                  <p className="content">
+                    저는 아이라이너와 마스카라가 굉장히 잘 번지는 눈을 갖고 있어서
+                    언더에 아이라이너를 칠한다던지 언더래쉬에 마스카라를 바른다는
+                    건 정말 상상하지도 못할 일이라고 생각하고 키스미 브라운
+                    마스카라도 번지는 눈을 갖고 있습니다.
                   </p>
                 </div>
               </div>
             </div>
 
-            <div class="review-section">
-              <div class="review">
+            <div className="review-section">
+              <div className="review">
                 <img src="/img/profile.jpeg" alt="프로필 사진" />
-                <div class="review_info">
-                  <p class="username">또흔</p>
-                  <p class="age-gender">31세/서울시 남양주</p>
-                  <p class="content">
-                    저는 아이라이너와 마스카라가 굉장히 잘 번지는 눈을 갖고 있어서 언더에 아이라이너를 칠한다던지 언더래쉬에 마스카라를 바른다는 건 정말 상상하지도 못할 일이라고 생각하고 키스미 브라운 마스카라도 번지는 눈을 갖고 있습니다.
+                <div className="review_info">
+                  <p className="stars">★★☆☆☆</p>
+                  <p className="username">또흔</p>
+                  <p className="age-gender">31세/서울시 남양주</p>
+                  <p className="content">
+                    저는 아이라이너와 마스카라가 굉장히 잘 번지는 눈을 갖고 있어서
+                    언더에 아이라이너를 칠한다던지 언더래쉬에 마스카라를 바른다는
+                    건 정말 상상하지도 못할 일이라고 생각하고 키스미 브라운
+                    마스카라도 번지는 눈을 갖고 있습니다.
                   </p>
                 </div>
               </div>
             </div>
 
-            <div class="review-section">
-              <div class="review">
+            <div className="review-section">
+              <div className="review">
                 <img src="/img/profile.jpeg" alt="프로필 사진" />
-                <div class="review_info">
-                  <p class="username">또흔</p>
-                  <p class="age-gender">31세/서울시 남양주</p>
-                  <p class="content">
-                    저는 아이라이너와 마스카라가 굉장히 잘 번지는 눈을 갖고 있어서 언더에 아이라이너를 칠한다던지 언더래쉬에 마스카라를 바른다는 건 정말 상상하지도 못할 일이라고 생각하고 키스미 브라운 마스카라도 번지는 눈을 갖고 있습니다.
+                <div className="review_info">
+                  <p className="stars">★★★★★</p>
+                  <p className="username">또흔</p>
+                  <p className="age-gender">31세/서울시 남양주</p>
+                  <p className="content">
+                    저는 아이라이너와 마스카라가 굉장히 잘 번지는 눈을 갖고 있어서
+                    언더에 아이라이너를 칠한다던지 언더래쉬에 마스카라를 바른다는
+                    건 정말 상상하지도 못할 일이라고 생각하고 키스미 브라운
+                    마스카라도 번지는 눈을 갖고 있습니다.
                   </p>
                 </div>
               </div>
             </div>
 
-            <button type="submit" className="join-button">리뷰 작성</button>
+            <div className="review-section">
+              <div className="review">
+                <img src="/img/profile.jpeg" alt="프로필 사진" />
+                <div className="review_info">
+                  <p className="stars">★★★★★</p>
+                  <p className="username">또흔</p>
+                  <p className="age-gender">31세/서울시 남양주</p>
+                  <p className="content">
+                    저는 아이라이너와 마스카라가 굉장히 잘 번지는 눈을 갖고 있어서
+                    언더에 아이라이너를 칠한다던지 언더래쉬에 마스카라를 바른다는
+                    건 정말 상상하지도 못할 일이라고 생각하고 키스미 브라운
+                    마스카라도 번지는 눈을 갖고 있습니다.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <button type="submit" className="review-button">리뷰 작성</button>
           </div>
         </div>
 
@@ -208,3 +236,4 @@ export default function about() {
     </>
   );
 }
+
