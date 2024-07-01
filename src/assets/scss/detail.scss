@@ -1,6 +1,6 @@
 .detail_main {
   padding: 20px;
-  width: 60%;
+  width: 70%;
   margin: 0 auto;
 }
 
@@ -19,11 +19,11 @@
   gap: 10px;
 }
 
-.save>p {
+.save > p {
   font-size: 14px;
 }
 
-.save>img {
+.save > img {
   width: 20px;
   height: 20px;
 }
@@ -59,16 +59,17 @@
   object-fit: cover;
 }
 
+// left
 .detail_mid {
   width: 100%;
   display: flex;
   justify-content: space-between;
 }
 
-// left
 .detail_left {
   width: 50%;
-  height: 100vh;
+  // height: 100vh;
+  overflow: hidden; /* 스크롤 제거 */
 }
 
 .detail_title {
@@ -88,13 +89,13 @@
   margin-bottom: 20px;
 }
 
-.profile1>img {
+.profile1 > img {
   width: 40px;
   height: 40px;
   border-radius: 50%;
 }
 
-.profile2>p {
+.profile2 > p {
   font-size: 14px;
 }
 
@@ -120,7 +121,7 @@
   margin-left: 5px;
 }
 
-.info2>p {
+.info2 > p {
   font-size: 14px;
 }
 
@@ -128,7 +129,7 @@
   border-top: 1px solid #ccc;
 }
 
-.info_text>p {
+.info_text > p {
   margin-top: 20px;
   margin-bottom: 40px;
 }
@@ -138,7 +139,7 @@
   margin-bottom: 20px;
 }
 
-.info_place>h2 {
+.info_place > h2 {
   margin-top: 20px;
   margin-bottom: 20px;
 }
@@ -146,18 +147,28 @@
 .info_place .place {
   display: flex;
   gap: 15px;
+  flex-wrap: wrap; /* 아이템이 한 줄에 넘치면 다음 줄로 넘어가게 설정 */
 }
 
-.info_place .place section>img {
+.info_place .place section {
+  flex: 1 1 45%; /* 아이템 크기를 고정하고 유연하게 설정 */
+  min-width: 200px; /* 최소 너비 설정 */
+  max-width: 45%; /* 최대 너비 설정 */
+  box-sizing: border-box;
+}
+
+.info_place .place section > img {
   border-radius: 8px;
   margin-bottom: 10px;
+  width: 100%; /* 이미지 너비를 섹션에 맞게 조정 */
+  height: auto; /* 이미지 비율 유지 */
 }
 
-.info_place .place section>h3 {
+.info_place .place section > h3 {
   font-size: 16px;
 }
 
-.info_place .place section>p {
+.info_place .place section > p {
   font-size: 14px;
 }
 
@@ -201,7 +212,7 @@
   border-bottom: none;
 }
 
-.review>img {
+.review > img {
   width: 40px;
   height: 40px;
   border-radius: 50%;
@@ -254,7 +265,7 @@
   margin-bottom: 20px;
 }
 
-.map>img {
+.map > img {
   object-fit: cover;
   width: 100%;
   height: 50vh;

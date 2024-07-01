@@ -91,7 +91,7 @@ export default function Footer() {
           <h4>더 보기</h4>
         </div>
       </div>
-      <hr class="footer_divider" />
+      <hr className="footer_divider" />
       <div className="section3">
         <div>
           <ul>
