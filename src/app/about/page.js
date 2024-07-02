@@ -75,7 +75,7 @@ export default function About() {
               <h2>편의시설 및 서비스</h2>
               <div className="detail_info2">
                 <div className="info2_icon">
-                  <img src="/img/room.jpg" alt="프로필이미지" />
+                  <img src="/img/check.png" alt="프로필이미지" />
                 </div>
                 <div className="info2">
                   <h3>속눈썹 연장</h3>
@@ -84,7 +84,7 @@ export default function About() {
 
               <div className="detail_info2">
                 <div className="info2_icon">
-                  <img src="/img/park.jpg" alt="프로필이미지" />
+                  <img src="/img/check.png" alt="프로필이미지" />
                 </div>
                 <div className="info2">
                   <h3>왁싱</h3>
@@ -93,7 +93,7 @@ export default function About() {
 
               <div className="detail_info2">
                 <div className="info2_icon">
-                  <img src="/img/park.jpg" alt="프로필이미지" />
+                  <img src="/img/check.png" alt="프로필이미지" />
                 </div>
                 <div className="info2">
                   <h3>반려동물 동반</h3>

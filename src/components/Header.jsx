@@ -1,9 +1,12 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Header() {
   return (
     <div id="header">
-      <h1 className="logo">오늘네일</h1>
+      <Link href={"/"}>
+        <h1 className="logo">오늘네일</h1>
+      </Link>
 
       <div className="right">
         <p>솔직한 네일샵 리뷰</p>

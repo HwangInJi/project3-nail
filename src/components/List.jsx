@@ -1,18 +1,29 @@
+import Link from "next/link";
+
 export default function List() {
   return (
     <>
       <div className="list">
         <div className="main__list">
-          <div className="list_item">
-            <img className="list_image" src="/img/01.jpeg" alt="이미지설명" />
-            <div className="list_text">
-              <span className="list_title">엑스 맨션에서 훈련하기</span>
-              <span className="list_host">호스트: Jubilee 님</span>
-              <span className="list_price">
-                <em>₩53,093</em> / 인
-              </span>
+          <Link href={"/about"}>
+            <div className="list_item">
+              <img
+                className="list_image"
+                src="https://search.pstatic.net/common/?autoRotate=true&type=w560_sharpen&src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20240321_157%2F1711010353086Glu5u_JPEG%2F2443A72D-68BC-41A8-9154-FBE99904D716.jpeg"
+                alt="이미지설명"
+              />
+              <div className="list_text">
+                <span className="list_title">
+                  <em>네일마인</em>
+                </span>
+                <span className="list_host">평점: ★★★★☆</span>
+                <span className="list_price">
+                  <p>리뷰수: 0</p>
+                  <p>찜한사람: 0</p>
+                </span>
+              </div>
             </div>
-          </div>
+          </Link>
         </div>
 
         <div className="main__list">

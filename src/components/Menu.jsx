@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Menu() {
   return (
@@ -6,7 +7,7 @@ export default function Menu() {
       <div className="main__menu">
         <ul>
           <li>
-            <a href="#">
+            <Link href={"/"}>
               <span className="menu_text">
                 <Image
                   className="menu_icon"
@@ -17,11 +18,11 @@ export default function Menu() {
                 />
                 <span>전체</span>
               </span>
-            </a>
+            </Link>
           </li>
 
           <li>
-            <a href="#">
+            <Link href={"/seoul"}>
               <span className="menu_text">
                 <Image
                   className="menu_icon"
@@ -32,11 +33,11 @@ export default function Menu() {
                 />
                 <span>서울</span>
               </span>
-            </a>
+            </Link>
           </li>
 
           <li>
-            <a href="#">
+            <Link href="#">
               <span className="menu_text">
                 <Image
                   className="menu_icon"
@@ -47,11 +48,11 @@ export default function Menu() {
                 />
                 <span>부산</span>
               </span>
-            </a>
+            </Link>
           </li>
 
           <li>
-            <a href="#">
+            <Link href="#">
               <span className="menu_text">
                 <Image
                   className="menu_icon"
@@ -62,11 +63,11 @@ export default function Menu() {
                 />
                 <span>인천</span>
               </span>
-            </a>
+            </Link>
           </li>
 
           <li>
-            <a href="#">
+            <Link href="#">
               <span className="menu_text">
                 <Image
                   className="menu_icon"
@@ -77,11 +78,11 @@ export default function Menu() {
                 />
                 <span>광주</span>
               </span>
-            </a>
+            </Link>
           </li>
 
           <li>
-            <a href="#">
+            <Link href="#">
               <span className="menu_text">
                 <Image
                   className="menu_icon"
@@ -92,11 +93,11 @@ export default function Menu() {
                 />
                 <span>대전</span>
               </span>
-            </a>
+            </Link>
           </li>
 
           <li>
-            <a href="#">
+            <Link href="#">
               <span className="menu_text">
                 <Image
                   className="menu_icon"
@@ -107,11 +108,11 @@ export default function Menu() {
                 />
                 <span>울산</span>
               </span>
-            </a>
+            </Link>
           </li>
 
           <li>
-            <a href="#">
+            <Link href="#">
               <span className="menu_text">
                 <Image
                   className="menu_icon"
@@ -122,11 +123,11 @@ export default function Menu() {
                 />
                 <span>세종</span>
               </span>
-            </a>
+            </Link>
           </li>
 
           <li>
-            <a href="#">
+            <Link href="#">
               <span className="menu_text">
                 <Image
                   className="menu_icon"
@@ -137,11 +138,11 @@ export default function Menu() {
                 />
                 <span>경기도</span>
               </span>
-            </a>
+            </Link>
           </li>
 
           <li>
-            <a href="#">
+            <Link href="#">
               <span className="menu_text">
                 <Image
                   className="menu_icon"
@@ -152,11 +153,11 @@ export default function Menu() {
                 />
                 <span>강원도</span>
               </span>
-            </a>
+            </Link>
           </li>
 
           <li>
-            <a href="#">
+            <Link href="#">
               <span className="menu_text">
                 <Image
                   className="menu_icon"
@@ -167,11 +168,11 @@ export default function Menu() {
                 />
                 <span>충청도</span>
               </span>
-            </a>
+            </Link>
           </li>
 
           <li>
-            <a href="#">
+            <Link href="#">
               <span className="menu_text">
                 <Image
                   className="menu_icon"
@@ -182,11 +183,11 @@ export default function Menu() {
                 />
                 <span>전라도</span>
               </span>
-            </a>
+            </Link>
           </li>
 
           <li>
-            <a href="#">
+            <Link href="#">
               <span className="menu_text">
                 <Image
                   className="menu_icon"
@@ -197,11 +198,11 @@ export default function Menu() {
                 />
                 <span>경상도</span>
               </span>
-            </a>
+            </Link>
           </li>
 
           <li>
-            <a href="#">
+            <Link href="#">
               <span className="menu_text">
                 <Image
                   className="menu_icon"
@@ -212,11 +213,11 @@ export default function Menu() {
                 />
                 <span>경상남도</span>
               </span>
-            </a>
+            </Link>
           </li>
 
           <li>
-            <a href="#">
+            <Link href="#">
               <span className="menu_text">
                 <Image
                   className="menu_icon"
@@ -227,7 +228,7 @@ export default function Menu() {
                 />
                 <span>제주도</span>
               </span>
-            </a>
+            </Link>
           </li>
         </ul>
       </div>

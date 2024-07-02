@@ -114,15 +114,18 @@
 
 .detail_info2 {
   display: flex;
-  gap: 20px;
+  gap: 10px;
   align-items: center;
 }
 
 .info2_icon {
   margin-top: 20px;
-  width: 24px;
-  height: 24px;
   margin-left: 10px;
+}
+
+.info2_icon > img {
+  width: 18px;
+  height: 18px;
 }
 
 .info2 {
