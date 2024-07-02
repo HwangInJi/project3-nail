@@ -70,7 +70,7 @@ export default function Menu() {
               <span className="menu_text">
                 <Image
                   className="menu_icon"
-                  src="/img/dom.jpg"
+                  src="/img/gwangju.png"
                   alt="컬처아이콘"
                   width={24}
                   height={24}
@@ -85,7 +85,7 @@ export default function Menu() {
               <span className="menu_text">
                 <Image
                   className="menu_icon"
-                  src="/img/ski.jpg"
+                  src="/img/dajeun.png"
                   alt="컬처아이콘"
                   width={24}
                   height={24}
@@ -145,7 +145,7 @@ export default function Menu() {
               <span className="menu_text">
                 <Image
                   className="menu_icon"
-                  src="/img/cacle.jpg"
+                  src="/img/gangwon.png"
                   alt="컬처아이콘"
                   width={24}
                   height={24}
@@ -190,7 +190,7 @@ export default function Menu() {
               <span className="menu_text">
                 <Image
                   className="menu_icon"
-                  src="/img/kids.jpg"
+                  src="/img/sangdo.png"
                   alt="컬처아이콘"
                   width={24}
                   height={24}
@@ -205,7 +205,7 @@ export default function Menu() {
               <span className="menu_text">
                 <Image
                   className="menu_icon"
-                  src="/img/design.jpg"
+                  src="/img/namdo.png"
                   alt="컬처아이콘"
                   width={24}
                   height={24}
@@ -220,7 +220,7 @@ export default function Menu() {
               <span className="menu_text">
                 <Image
                   className="menu_icon"
-                  src="/img/tong.jpg"
+                  src="/img/jeju.png"
                   alt="컬처아이콘"
                   width={24}
                   height={24}

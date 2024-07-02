@@ -12,7 +12,7 @@ export default function Home() {
       <Header />
       <Search />
       <Menu />
-      <List />
+      <List href="/about" />
       <Footer />
     </>
   );
