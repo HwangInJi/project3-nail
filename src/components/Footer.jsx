@@ -6,7 +6,7 @@ export default function Footer() {
   return (
     <footer id="footer">
       <div className="section">
-        <p>© 2024 Airbnb, Inc.</p>
+        <p>© 2024 오늘네일, Inc.</p>
         <div className="Privacy">
           <ul>
             <li>

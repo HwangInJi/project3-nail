@@ -200,13 +200,86 @@ export default function About() {
           </div>
 
           <div className="detail_right">
-            <div className="review-section">
-              <div className="review">
-                <img src="/img/profile.jpeg" alt="프로필 사진" />
-                <div className="review_info">
-                  <p className="stars">★★★★☆</p>
-                  <p className="username">또흔</p>
-                  <p className="age-gender">31세/경기도 안산시</p>
+            <div className="detail__review">
+              <div className="review-section">
+                <div className="image-section">
+                  <img src="/img/02.png" alt="상품 이미지" />
+                </div>
+                <div className="review">
+                  <div className="review_info">
+                    <img src="/img/profile.jpeg" alt="프로필 사진" />
+                    <div className="user-info">
+                      <p className="stars">★★★★☆</p>
+                      <p className="username">또흔</p>
+                      <p className="review_data">2024.07.03</p>
+                    </div>
+                  </div>
+                  <p className="content">
+                    저는 아이라이너와 마스카라가 굉장히 잘 번지는 눈을 갖고
+                    있어서 언더에 아이라이너를 칠한다던지 언더래쉬에 마스카라를
+                    바른다는 건 정말 상상하지도 못할 일이라고 생각하고 키스미
+                    브라운 마스카라도 번지는 눈을 갖고 있습니다. 마스카라 새로
+                    사려고 알아보다가 제가 좋아하는 유튜브어쩌고 저쩌고
+                  </p>
+                </div>
+              </div>
+              <div className="review-section">
+                <div className="image-section">
+                  <img src="/img/02.png" alt="상품 이미지" />
+                </div>
+                <div className="review">
+                  <div className="review_info">
+                    <img src="/img/profile.jpeg" alt="프로필 사진" />
+                    <div className="user-info">
+                      <p className="stars">★★★★☆</p>
+                      <p className="username">또흔</p>
+                      <p className="review_data">2024.07.03</p>
+                    </div>
+                  </div>
+                  <p className="content">
+                    저는 아이라이너와 마스카라가 굉장히 잘 번지는 눈을 갖고
+                    있어서 언더에 아이라이너를 칠한다던지 언더래쉬에 마스카라를
+                    바른다는 건 정말 상상하지도 못할 일이라고 생각하고 키스미
+                    브라운 마스카라도 번지는 눈을 갖고 있습니다. 마스카라 새로
+                    사려고 알아보다가 제가 좋아하는 유튜브어쩌고 저쩌고
+                  </p>
+                </div>
+              </div>
+              <div className="review-section">
+                <div className="image-section">
+                  <img src="/img/02.png" alt="상품 이미지" />
+                </div>
+                <div className="review">
+                  <div className="review_info">
+                    <img src="/img/profile.jpeg" alt="프로필 사진" />
+                    <div className="user-info">
+                      <p className="stars">★★★★☆</p>
+                      <p className="username">또흔</p>
+                      <p className="review_data">2024.07.03</p>
+                    </div>
+                  </div>
+                  <p className="content">
+                    저는 아이라이너와 마스카라가 굉장히 잘 번지는 눈을 갖고
+                    있어서 언더에 아이라이너를 칠한다던지 언더래쉬에 마스카라를
+                    바른다는 건 정말 상상하지도 못할 일이라고 생각하고 키스미
+                    브라운 마스카라도 번지는 눈을 갖고 있습니다. 마스카라 새로
+                    사려고 알아보다가 제가 좋아하는 유튜브어쩌고 저쩌고
+                  </p>
+                </div>
+              </div>
+              <div className="review-section">
+                <div className="image-section">
+                  <img src="/img/02.png" alt="상품 이미지" />
+                </div>
+                <div className="review">
+                  <div className="review_info">
+                    <img src="/img/profile.jpeg" alt="프로필 사진" />
+                    <div className="user-info">
+                      <p className="stars">★★★★☆</p>
+                      <p className="username">또흔</p>
+                      <p className="review_data">2024.07.03</p>
+                    </div>
+                  </div>
                   <p className="content">
                     저는 아이라이너와 마스카라가 굉장히 잘 번지는 눈을 갖고
                     있어서 언더에 아이라이너를 칠한다던지 언더래쉬에 마스카라를
@@ -217,76 +290,7 @@ export default function About() {
                 </div>
               </div>
             </div>
-
-            <div className="review-section">
-              <div className="review">
-                <img src="/img/profile.jpeg" alt="프로필 사진" />
-                <div className="review_info">
-                  <p className="stars">★★★☆☆</p>
-                  <p className="username">또흔</p>
-                  <p className="age-gender">31세/서울시 남양주</p>
-                  <p className="content">
-                    저는 아이라이너와 마스카라가 굉장히 잘 번지는 눈을 갖고
-                    있어서 언더에 아이라이너를 칠한다던지 언더래쉬에 마스카라를
-                    바른다는 건 정말 상상하지도 못할 일이라고 생각하고 키스미
-                    브라운 마스카라도 번지는 눈을 갖고 있습니다.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <div className="review-section">
-              <div className="review">
-                <img src="/img/profile.jpeg" alt="프로필 사진" />
-                <div className="review_info">
-                  <p className="stars">★★☆☆☆</p>
-                  <p className="username">또흔</p>
-                  <p className="age-gender">31세/서울시 남양주</p>
-                  <p className="content">
-                    저는 아이라이너와 마스카라가 굉장히 잘 번지는 눈을 갖고
-                    있어서 언더에 아이라이너를 칠한다던지 언더래쉬에 마스카라를
-                    바른다는 건 정말 상상하지도 못할 일이라고 생각하고 키스미
-                    브라운 마스카라도 번지는 눈을 갖고 있습니다.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <div className="review-section">
-              <div className="review">
-                <img src="/img/profile.jpeg" alt="프로필 사진" />
-                <div className="review_info">
-                  <p className="stars">★★★★★</p>
-                  <p className="username">또흔</p>
-                  <p className="age-gender">31세/서울시 남양주</p>
-                  <p className="content">
-                    저는 아이라이너와 마스카라가 굉장히 잘 번지는 눈을 갖고
-                    있어서 언더에 아이라이너를 칠한다던지 언더래쉬에 마스카라를
-                    바른다는 건 정말 상상하지도 못할 일이라고 생각하고 키스미
-                    브라운 마스카라도 번지는 눈을 갖고 있습니다.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <div className="review-section">
-              <div className="review">
-                <img src="/img/profile.jpeg" alt="프로필 사진" />
-                <div className="review_info">
-                  <p className="stars">★★★★★</p>
-                  <p className="username">또흔</p>
-                  <p className="age-gender">31세/서울시 남양주</p>
-                  <p className="content">
-                    저는 아이라이너와 마스카라가 굉장히 잘 번지는 눈을 갖고
-                    있어서 언더에 아이라이너를 칠한다던지 언더래쉬에 마스카라를
-                    바른다는 건 정말 상상하지도 못할 일이라고 생각하고 키스미
-                    브라운 마스카라도 번지는 눈을 갖고 있습니다.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <Link href={"/write"}>
+            <Link href={"/write"} className="wirte-button_a">
               <button type="submit" className="review-button">
                 리뷰 작성
               </button>

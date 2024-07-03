@@ -26,7 +26,7 @@ export default function Menu() {
               <span className="menu_text">
                 <Image
                   className="menu_icon"
-                  src="/img/swimming.jpg"
+                  src="/img/seoul.svg"
                   alt="컬처아이콘"
                   width={24}
                   height={24}
@@ -56,7 +56,7 @@ export default function Menu() {
               <span className="menu_text">
                 <Image
                   className="menu_icon"
-                  src="/img/junmang.jpg"
+                  src="/img/incheon.svg"
                   alt="컬처아이콘"
                   width={24}
                   height={24}
@@ -71,7 +71,7 @@ export default function Menu() {
               <span className="menu_text">
                 <Image
                   className="menu_icon"
-                  src="/img/gwangju.png"
+                  src="/img/gwangju.svg"
                   alt="컬처아이콘"
                   width={24}
                   height={24}
@@ -86,7 +86,7 @@ export default function Menu() {
               <span className="menu_text">
                 <Image
                   className="menu_icon"
-                  src="/img/dajeun.png"
+                  src="/img/dajeun.svg"
                   alt="컬처아이콘"
                   width={24}
                   height={24}
@@ -101,7 +101,7 @@ export default function Menu() {
               <span className="menu_text">
                 <Image
                   className="menu_icon"
-                  src="/img/beach.jpg"
+                  src="/img/ulsan.svg"
                   alt="컬처아이콘"
                   width={24}
                   height={24}
@@ -116,7 +116,7 @@ export default function Menu() {
               <span className="menu_text">
                 <Image
                   className="menu_icon"
-                  src="/img/korea.jpg"
+                  src="/img/sejong.svg"
                   alt="컬처아이콘"
                   width={24}
                   height={24}
@@ -131,7 +131,7 @@ export default function Menu() {
               <span className="menu_text">
                 <Image
                   className="menu_icon"
-                  src="/img/space.jpg"
+                  src="/img/gyeonggido.svg"
                   alt="컬처아이콘"
                   width={24}
                   height={24}
@@ -146,7 +146,7 @@ export default function Menu() {
               <span className="menu_text">
                 <Image
                   className="menu_icon"
-                  src="/img/gangwon.png"
+                  src="/img/gangwon.svg"
                   alt="컬처아이콘"
                   width={24}
                   height={24}
@@ -161,7 +161,7 @@ export default function Menu() {
               <span className="menu_text">
                 <Image
                   className="menu_icon"
-                  src="/img/park.jpg"
+                  src="/img/Chungcheong.svg"
                   alt="컬처아이콘"
                   width={24}
                   height={24}
@@ -176,7 +176,7 @@ export default function Menu() {
               <span className="menu_text">
                 <Image
                   className="menu_icon"
-                  src="/img/room.jpg"
+                  src="/img/Jeollado.svg"
                   alt="컬처아이콘"
                   width={24}
                   height={24}
@@ -191,7 +191,7 @@ export default function Menu() {
               <span className="menu_text">
                 <Image
                   className="menu_icon"
-                  src="/img/sangdo.png"
+                  src="/img/sangdo.svg"
                   alt="컬처아이콘"
                   width={24}
                   height={24}
@@ -206,7 +206,7 @@ export default function Menu() {
               <span className="menu_text">
                 <Image
                   className="menu_icon"
-                  src="/img/namdo.png"
+                  src="/img/namdo.svg"
                   alt="컬처아이콘"
                   width={24}
                   height={24}
@@ -221,7 +221,7 @@ export default function Menu() {
               <span className="menu_text">
                 <Image
                   className="menu_icon"
-                  src="/img/jeju.png"
+                  src="/img/jeju.svg"
                   alt="컬처아이콘"
                   width={24}
                   height={24}
