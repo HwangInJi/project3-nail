@@ -10,13 +10,6 @@ export default function Header() {
 
       <div className="right">
         <p>솔직한 네일샵 리뷰</p>
-        <Image
-          src="/img/earth.png"
-          alt="menu"
-          className="space"
-          width={16}
-          height={16}
-        />
         <div className="my">
           <Image
             src="/img/menu.png"

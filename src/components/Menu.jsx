@@ -37,7 +37,7 @@ export default function Menu() {
           </li>
 
           <li>
-            <Link href="#">
+            <Link href={"/busan"}>
               <span className="menu_text">
                 <Image
                   className="menu_icon"
@@ -52,7 +52,7 @@ export default function Menu() {
           </li>
 
           <li>
-            <Link href="#">
+            <Link href={"/incheon"}>
               <span className="menu_text">
                 <Image
                   className="menu_icon"
@@ -67,7 +67,7 @@ export default function Menu() {
           </li>
 
           <li>
-            <Link href="#">
+            <Link href={"/gwangju"}>
               <span className="menu_text">
                 <Image
                   className="menu_icon"
@@ -82,7 +82,7 @@ export default function Menu() {
           </li>
 
           <li>
-            <Link href="#">
+            <Link href={"/dajeun"}>
               <span className="menu_text">
                 <Image
                   className="menu_icon"
@@ -97,7 +97,7 @@ export default function Menu() {
           </li>
 
           <li>
-            <Link href="#">
+            <Link href={"/ulsan"}>
               <span className="menu_text">
                 <Image
                   className="menu_icon"
@@ -112,7 +112,7 @@ export default function Menu() {
           </li>
 
           <li>
-            <Link href="#">
+            <Link href={"/sejong"}>
               <span className="menu_text">
                 <Image
                   className="menu_icon"
@@ -127,7 +127,7 @@ export default function Menu() {
           </li>
 
           <li>
-            <Link href="#">
+            <Link href={"/gyeonggido"}>
               <span className="menu_text">
                 <Image
                   className="menu_icon"
@@ -142,7 +142,7 @@ export default function Menu() {
           </li>
 
           <li>
-            <Link href="#">
+            <Link href={"/gangwon"}>
               <span className="menu_text">
                 <Image
                   className="menu_icon"
@@ -157,7 +157,7 @@ export default function Menu() {
           </li>
 
           <li>
-            <Link href="#">
+            <Link href={"/Chungcheong"}>
               <span className="menu_text">
                 <Image
                   className="menu_icon"
@@ -172,7 +172,7 @@ export default function Menu() {
           </li>
 
           <li>
-            <Link href="#">
+            <Link href={"/Jeollado"}>
               <span className="menu_text">
                 <Image
                   className="menu_icon"
@@ -187,7 +187,7 @@ export default function Menu() {
           </li>
 
           <li>
-            <Link href="#">
+            <Link href={"/gyeongsangdo"}>
               <span className="menu_text">
                 <Image
                   className="menu_icon"
@@ -202,7 +202,7 @@ export default function Menu() {
           </li>
 
           <li>
-            <Link href="#">
+            <Link href={"/gyeongsangnamdo"}>
               <span className="menu_text">
                 <Image
                   className="menu_icon"
@@ -217,7 +217,7 @@ export default function Menu() {
           </li>
 
           <li>
-            <Link href="#">
+            <Link href={"/jeju"}>
               <span className="menu_text">
                 <Image
                   className="menu_icon"

@@ -29,7 +29,7 @@ export default function WritePage() {
         </div>
         <textarea
           className="textarea"
-          placeholder="내용을 입력하세요..."
+          placeholder="리뷰를 작성해주세요."
         ></textarea>
         <div className="uploadedImageContainer">
           <img src="/img/02.png" alt="Uploaded" className="uploadedImage" />

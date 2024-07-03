@@ -3,6 +3,7 @@ import Header from "@/components/Header";
 import Search from "@/components/Search";
 import Footer from "@/components/Footer";
 import Link from "next/link";
+import { IoMdHeartEmpty } from "react-icons/io";
 
 export default function About() {
   return (
@@ -13,8 +14,7 @@ export default function About() {
         <div className="detail_top">
           <h1>네일마인</h1>
           <div className="save">
-            <p>저장하기</p>
-            <img src="/img/heart.png" alt="저장하기" />
+            <p><IoMdHeartEmpty />저장하기</p>
           </div>
         </div>
         <div className="gallery-container">

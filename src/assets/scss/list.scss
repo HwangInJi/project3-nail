@@ -50,8 +50,20 @@
 .list_price {
   display: flex;
   font-size: 16px;
-  gap: 50px;
+  gap: 25px;
   color: #555;
+  align-items: center;
+
+  >p {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+
+    >svg {
+      width: 16px;
+      height: 16px;
+    }
+  }
 }
 
 .list_host {
@@ -66,7 +78,9 @@ em {
   font-style: normal;
 }
 
-.prewlist {
+.ratelist,
+.reviewlist,
+.allist {
   font-size: 32px;
   font-weight: bold;
   width: 90%;
@@ -74,4 +88,8 @@ em {
   justify-content: left;
   margin-top: 30px;
   margin-bottom: 20px;
+
+  >svg {
+    margin-right: 10px;
+  }
 }
