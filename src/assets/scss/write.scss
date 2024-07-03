@@ -38,12 +38,10 @@
 
 .star {
   font-size: 2rem;
-  cursor: pointer;
-  color: #ddd;
-}
-
-.star.filled {
-  color: #f39c12;
+  color: #ff385c;
+  margin: 0 5px;
+  width: 60px;
+  height: 60px;
 }
 
 .textarea {
@@ -73,18 +71,15 @@
   cursor: pointer;
   text-align: center;
 }
-.wirte-button_a {
-  .write-button {
-    position: absolute;
-    width: 100%;
-    padding: 10px;
-    margin-top: 20px;
-    border: none;
-    border-radius: 4px;
-    background: #ff385c;
-    color: #fff;
-    font-size: 16px;
-    cursor: pointer;
-    text-align: center;
-  }
+
+.write-button {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  background: #ff385c;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 20px;
 }

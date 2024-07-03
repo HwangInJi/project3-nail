@@ -1,6 +1,8 @@
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import Search from "@/components/Search";
+
+import { FaRegStar } from "react-icons/fa";
 import Link from "next/link";
 
 export default function WritePage() {
@@ -20,6 +22,11 @@ export default function WritePage() {
             <p className="date">2024.07.03</p>
           </div>
         </div>
+        <div className="rating">
+          {[...Array(5)].map((_, index) => (
+            <FaRegStar key={index} className="star" />
+          ))}
+        </div>
         <textarea
           className="textarea"
           placeholder="내용을 입력하세요..."
@@ -35,12 +42,13 @@ export default function WritePage() {
             id="imageUpload"
           />
         </div>
+        <Link href={"/about"}>
+          <button type="submit" className="write-button">
+            작성 완료
+          </button>
+        </Link>
       </main>
-      <Link href={"/about"}>
-        <button type="submit" className="write-button">
-          작성 완료
-        </button>
-      </Link>
+
       <Footer />
     </>
   );

@@ -218,7 +218,8 @@
   }
   .detail__review {
     display: block;
-    width: calc(100% - 2px);
+    // width: calc(100% - 2px);
+    // border: 1px solid #ccc;
     border-radius: 8px;
     height: 100vh;
     margin-bottom: 20px;
