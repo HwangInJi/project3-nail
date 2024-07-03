@@ -2,6 +2,7 @@ import React from "react";
 import Header from "@/components/Header";
 import Search from "@/components/Search";
 import Footer from "@/components/Footer";
+import Link from "next/link";
 
 export default function About() {
   return (
@@ -284,9 +285,12 @@ export default function About() {
                 </div>
               </div>
             </div>
-            <button type="submit" className="review-button">
-              리뷰 작성
-            </button>
+
+            <Link href={"/write"}>
+              <button type="submit" className="review-button">
+                리뷰 작성
+              </button>
+            </Link>
           </div>
         </div>
 

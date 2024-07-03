@@ -1,5 +1,6 @@
 :root {
-  --fontN: "wooriDaum";
+  // --fontN: "wooriDaum";
+  --fontF: "Pretendard-Regular";
   --fontL: "LOTTERIACHAB";
 
   --mainBg-color: #f3ede8;
@@ -16,7 +17,7 @@
   --black300: #686868;
   --black400: #e0e0e0;
 
-  font-family: var(--fontN), var(--fontL);
+  font-family: var(--fontF), var(--fontL);
   font-size: 16px;
   line-height: 1.5;
   font-weight: 300;

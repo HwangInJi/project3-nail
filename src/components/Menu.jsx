@@ -41,7 +41,7 @@ export default function Menu() {
               <span className="menu_text">
                 <Image
                   className="menu_icon"
-                  src="/img/busan.png"
+                  src="/img/busan.svg"
                   alt="컬처아이콘"
                   width={24}
                   height={24}
