@@ -2,7 +2,7 @@
   width: 90%;
   margin: 0 auto;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   padding: 20px;
 }
@@ -11,7 +11,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 100%;
+  flex-grow: 1;
+  overflow: hidden; /* 슬라이더 영역을 숨기기 위해 overflow 설정 */
 }
 
 .left_button,
@@ -19,20 +20,21 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 40px;
-  height: 40px;
-  background-color: #f0f0f0; /* 버튼 배경 색상 */
-  border: none; /* 버튼 테두리 제거 */
-  border-radius: 20px; /* 버튼 모서리 둥글게 */
-  cursor: pointer; /* 마우스 커서 변경 */
+  width: 35px;
+  height: 35px;
+  background-color: #ff385c;
+  color: #fff;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
 }
 
 .main__menu ul {
   display: flex;
   align-items: center;
-  justify-content: center;
   padding: 0;
   list-style: none;
+  transition: transform 0.3s ease; /* 슬라이드 애니메이션 */
 }
 
 .main__menu li {
@@ -48,11 +50,16 @@
   align-items: center;
   font-size: 12px;
   text-align: center;
-  /* 텍스트를 가운데 정렬 */
 }
 
 .menu_icon {
   width: 24px;
   height: 24px;
   margin-bottom: 5px;
+}
+
+@media (max-width: 1240px) {
+  .main__menu ul {
+    transform: translateX(0); /* 초기 위치 설정 */
+  }
 }
