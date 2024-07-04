@@ -21,11 +21,6 @@
   overflow: hidden;
 }
 
-.list_item:nth-child(6n) {
-  margin-right: 0;
-  /* 각 줄의 마지막 항목은 오른쪽 마진 제거 */
-}
-
 .list_image {
   aspect-ratio: 1;
   object-fit: cover;
@@ -91,5 +86,57 @@ em {
 
   > svg {
     margin-right: 10px;
+  }
+}
+
+/* 반응형 설정 */
+@media (max-width: 1240px) {
+  .list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, auto);
+    gap: 20px;
+  }
+
+  .main__list {
+    width: auto; /* grid 레이아웃을 사용하기 때문에 너비 자동 설정 */
+  }
+
+  .list_item {
+    width: 100%; /* 각 grid 아이템이 가득 채우도록 설정 */
+  }
+}
+
+@media (max-width: 650px) {
+  .list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, auto);
+    gap: 20px;
+  }
+
+  .main__list {
+    width: auto; /* grid 레이아웃을 사용하기 때문에 너비 자동 설정 */
+  }
+
+  .list_item {
+    width: 100%; /* 각 grid 아이템이 가득 채우도록 설정 */
+  }
+}
+
+@media (max-width: 300px) {
+  .list {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(1, auto);
+    gap: 20px;
+  }
+
+  .main__list {
+    width: auto; /* grid 레이아웃을 사용하기 때문에 너비 자동 설정 */
+  }
+
+  .list_item {
+    width: 100%; /* 각 grid 아이템이 가득 채우도록 설정 */
   }
 }
