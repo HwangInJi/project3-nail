@@ -6,10 +6,10 @@
   margin-top: 80px;
 }
 
-ul {
+> ul {
   display: flex;
 
-  li {
+  > li {
     margin-left: 20px;
   }
 }

@@ -56,3 +56,14 @@
   height: 30px;
   width: 30px;
 }
+
+@media (max-width: 650px) {
+  #header {
+    display: flex;
+    align-items: center;
+  }
+
+  .my {
+    margin-bottom: 1rem;
+  }
+}

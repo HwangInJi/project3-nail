@@ -1,10 +1,16 @@
 import Image from "next/image";
 import Link from "next/link";
 
+import { GoChevronLeft } from "react-icons/go";
+import { GoChevronRight } from "react-icons/go";
+
 export default function Menu() {
   return (
     <div id="main">
       <div className="main__menu">
+        <button className="left_button">
+          <GoChevronLeft />
+        </button>
         <ul>
           <li>
             <Link href={"/"}>
@@ -231,6 +237,9 @@ export default function Menu() {
             </Link>
           </li>
         </ul>
+        <button className="right_button">
+          <GoChevronRight />
+        </button>
       </div>
     </div>
   );

@@ -7,7 +7,10 @@ import { IoMdHeartEmpty } from "react-icons/io";
 export default function List() {
   return (
     <>
-      <div className="ratelist"><GoStar />평점 높은 네일샵</div>
+      <div className="ratelist">
+        <GoStar />
+        평점 높은 네일샵
+      </div>
       <div className="list">
         <div className="main__list">
           <div className="list_item">
@@ -82,7 +85,10 @@ export default function List() {
         </div>
       </div>
 
-      <div className="reviewlist"><BsChatSquareText />리뷰 많은 네일샵</div>
+      <div className="reviewlist">
+        <BsChatSquareText />
+        리뷰 많은 네일샵
+      </div>
       <div className="list">
         <div className="main__list">
           <Link href={"/about"}>
@@ -98,8 +104,14 @@ export default function List() {
                 </span>
                 <span className="list_host">평점: ★★★★☆</span>
                 <span className="list_price">
-                  <p><BsChatSquareText />리뷰수: 0</p>
-                  <p><IoMdHeartEmpty />찜한사람: 0</p>
+                  <p>
+                    <BsChatSquareText />
+                    리뷰수: 0
+                  </p>
+                  <p>
+                    <IoMdHeartEmpty />
+                    찜한사람: 0
+                  </p>
                 </span>
               </div>
             </div>
@@ -176,7 +188,10 @@ export default function List() {
         </div>
       </div>
 
-      <div className="allist"><BsShop />네일샵 전체 보기</div>
+      <div className="allist">
+        <BsShop />
+        네일샵 전체 보기
+      </div>
       <div className="list">
         <div className="main__list">
           <Link href={"/about"}>
