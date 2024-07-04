@@ -132,6 +132,18 @@ em {
     gap: 20px;
   }
 
+  .ratelist,
+  .reviewlist,
+  .allist {
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    > svg {
+      width: 20px;
+      height: 20px;
+    }
+  }
+
   .main__list {
     width: auto; /* grid 레이아웃을 사용하기 때문에 너비 자동 설정 */
   }
