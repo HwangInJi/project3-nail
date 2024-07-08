@@ -55,11 +55,7 @@ export default function Page() {
             <h1>회원 정보</h1>
             <div className="uesr_info">
               <div className="user_left">
-                <img
-                  src="../img/01.jpeg"
-                  alt="프로필이미지"
-                  className="profile-img"
-                />
+                <img src="../img/01.jpeg" alt="img" />
                 <button className="profile-chg">프로필 사진 변경</button>
               </div>
 
