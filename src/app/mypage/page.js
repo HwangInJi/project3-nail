@@ -1,63 +1,103 @@
+"use client";
+import { useState } from "react";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
-export default function page() {
+
+export default function Page() {
+  // const [showMyPage, setShowMyPage] = useState(true);
+  // const [showNailBox, setShowNailBox] = useState(true);
+  const [activeButton, setActiveButton] = useState("mypage");
+
+  const handleMyPageClick = () => {
+    setShowMyPage(true);
+    setActiveButton("mypage");
+  };
+
+  const handleActivitiesClick = () => {
+    setShowMyPage(false);
+    setActiveButton("activities");
+  };
+
+  // const handleNailClick = () => {
+  //   setShowNailBox(true);
+  // };
+
+  // const handleReviewClick = () => {
+  //   setShowNailBox(false);
+  // };
+
   return (
     <>
       <Header />
       <section id="mypage">
-        <h1 className="CMI">
-          <div className="top-line"></div>회원 정보 변경
-        </h1>
-        <h1 className="my-activities">나의 활동</h1>
+        <div className="top-line"></div>
         <div className="mypage-container">
           <div className="mypage-menu">
-            <button className="mypage-btn">회원 정보 변경</button>
-            <button className="mypage-btn">나의 활동</button>
+            <button
+              className={`mypage-btn ${
+                activeButton === "mypage" ? "active" : ""
+              }`}
+              onClick={handleMyPageClick}
+            >
+              회원 정보 및 변경
+            </button>
+            <button
+              className={`my-activities-btn ${
+                activeButton === "activities" ? "active" : ""
+              }`}
+              onClick={handleActivitiesClick}
+            >
+              나의 활동
+            </button>
           </div>
+
           <div className="mypage-section">
-            <h2 className="my-title">회원 정보 변경</h2>
-            <div className="section-header">
-              <div className="My-Info">
-                <span className="My-Info-box">닉네임</span>
+            <h1>회원 정보</h1>
+            <div className="uesr_info">
+              <div className="user_left">
+                <img
+                  src="../img/01.jpeg"
+                  alt="프로필이미지"
+                  className="profile-img"
+                />
+                <button className="profile-chg">프로필 사진 변경</button>
+              </div>
+
+              <div className="user_right">
+                <span className="My-Info-box">현재 닉네임</span>
                 <div className="nickname">
                   <span>남윤서</span>
                 </div>
               </div>
-              <div className="myprofile">
-                <div className="profile-img-box">
-                  <img src="../../img/01.jpeg" alt="" className="profile-img" />
-                </div>
-                <button className="profile-chg">프로필 사진 변경</button>
-              </div>
             </div>
 
-            <div className="section-CMI">
-              <div className="mypage-input-box">
-                <h2 className="input-title">닉네임 변경</h2>
+            <div className="section-right">
+              <h1>회원 정보 변경</h1>
+              <div className="info-row">
+                <span className="info-label">닉네임</span>
                 <input
-                  className="CMI-INP"
+                  className="info-input"
                   type="text"
-                  placeholder="닉네임 변경"
+                  placeholder="변경할 닉네임을 입력해주세요."
                 />
               </div>
-              <div className="mypage-input-box">
-                <h2 className="input-title">비밀번호 변경</h2>
+              <div className="info-row">
+                <span className="info-label">현재 비밀번호</span>
                 <input
-                  className="CMI-INP"
+                  className="info-input"
                   type="password"
-                  placeholder="비밀번호 변경"
+                  placeholder="현재 비밀번호를 입력해주세요."
                 />
               </div>
-              <div className="mypage-input-box">
-                <h2 className="input-title">비밀번호 변경 확인</h2>
+              <div className="info-row">
+                <span className="info-label">새 비밀번호</span>
                 <input
-                  className="CMI-INP"
+                  className="info-input"
                   type="password"
-                  placeholder="비밀번호 변경 확인"
+                  placeholder="새 비밀번호를 입력해주세요."
                 />
               </div>
-
-              <button className="change-btn">변경하기</button>
+              <button className="confirm-button">변경하기</button>
             </div>
           </div>
         </div>

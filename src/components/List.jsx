@@ -1,24 +1,56 @@
+"use client";
+
 import React, { useEffect, useState } from "react";
+import { useRouter, usePathname } from "next/Navigation";
 import Link from "next/link";
 import { GoStar } from "react-icons/go";
 import { BsChatSquareText } from "react-icons/bs";
 import { BsShop } from "react-icons/bs";
-import { IoMdHeartEmpty } from "react-icons/io";
 
 export default function List() {
   const [shops, setShops] = useState([]);
+  const [page, setPage] = useState(1);
+  const [loading, setLoading] = useState(false);
+  const [hasMore, setHasMore] = useState(true);
+  const router = useRouter();
+  const { address } = usePathname;
+
+  const fetchShops = async (page) => {
+    setLoading(true);
+    try {
+      const response = await fetch(
+        `/api/shop_list?page=${page}&limit=20&city=${address}`
+      );
+      if (!response.ok) {
+        throw new Error("Network response was not ok");
+      }
+      const data = await response.json();
+      if (data.length < 20) {
+        setHasMore(false);
+      }
+      setShops((prevShops) => [...prevShops, ...data]);
+    } catch (error) {
+      console.error("Fetch error:", error);
+    }
+    setLoading(false);
+  };
 
   useEffect(() => {
-    fetch("/api/shop_list")
-      .then((response) => {
-        if (!response.ok) {
-          throw new Error("Network response was not ok");
-        }
-        return response.json();
-      })
-      .then((data) => setShops(data))
-      .catch((error) => console.error("Fetch error:", error));
-  }, []);
+    setShops([]);
+    setPage(1);
+    setHasMore(true);
+    fetchShops(1);
+  }, [address]);
+
+  const loadMore = () => {
+    if (!loading && hasMore) {
+      setPage((prevPage) => {
+        const newPage = prevPage + 1;
+        fetchShops(newPage);
+        return newPage;
+      });
+    }
+  };
 
   return (
     <>
@@ -28,7 +60,7 @@ export default function List() {
       </div>
       <div className="list">
         {shops.slice(0, 6).map((shop) => (
-          <div className="main__list" key={shop._id}>
+          <div className="main__list" key={`${shop._id}-rating`}>
             <Link href={`/about?shop_id=${shop._id}`}>
               <div className="list_item">
                 <img
@@ -51,7 +83,7 @@ export default function List() {
       </div>
       <div className="list">
         {shops.slice(0, 6).map((shop) => (
-          <div className="main__list" key={shop._id}>
+          <div className="main__list" key={`${shop._id}-review`}>
             <Link href={`/about?shop_id=${shop._id}`}>
               <div className="list_item">
                 <img
@@ -74,7 +106,7 @@ export default function List() {
       </div>
       <div className="list">
         {shops.map((shop) => (
-          <div className="main__list" key={shop._id}>
+          <div className="main__list" key={`${shop._id}-all`}>
             <Link href={`/about?shop_id=${shop._id}`}>
               <div className="list_item">
                 <img
@@ -90,6 +122,13 @@ export default function List() {
           </div>
         ))}
       </div>
+      {hasMore && (
+        <div className="load-more">
+          <button onClick={loadMore} disabled={loading}>
+            {loading ? "로딩 중..." : "더보기"}
+          </button>
+        </div>
+      )}
     </>
   );
 }
