@@ -1,5 +1,5 @@
 ## 전국 네일샵 익명 리뷰 사이트
-![map](https://github.com/HwangInJi/project3-nail/assets/163365140/663328fa-5cd5-4fa8-b167-258f2aee549d)
+[오늘네일 사이트](https://onel.vercel.app/listpage)
 
 ### 📑 제작 의도
 
