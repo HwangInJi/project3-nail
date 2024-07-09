@@ -1,182 +1,281 @@
 #mypage {
-
-  .top-line {
+  .CMI {
     margin-top: 40px;
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 50px;
+    display: none;
+  }
+  .my-activities {
+    margin-top: 40px;
+    font-size: 2rem;
+    text-align: center;
+    display: none;
+  }
+}
+
+.top-line {
+  margin-top: 40px;
+  width: 100%;
+  border: 1px solid #f7f7f7;
+}
+
+.mypage-container {
+  height: 80vh;
+  display: flex;
+  width: 100%;
+  .top-line {
+    margin-bottom: 30px;
     width: 100%;
     border: 1px solid #f7f7f7;
   }
+  .mypage-menu {
+    // background-color: #ffc2cd;
+    height: 100%;
+    width: 15%;
 
-  .mypage-container {
-    display: flex;
-    width: 100%;
-    height: 79vh;
+    .mypage-btn,
+    .my-activities-btn {
+      padding: 15px 20px;
+      width: 100%;
+      font-weight: bold;
+      font-size: 20px;
+      border: 0;
+      text-align: left;
+      transition: all 0.3s;
+      color: var(--white);
+      font-family: var(--fontF);
+      background-color: #fff;
+      color: #000;
+      border-radius: 0 50px 50px 0;
+      cursor: pointer;
+      &:hover {
+        width: 100%;
+        background-color: #ff93ac;
+        opacity: 1;
+        color: #fff;
+      }
 
-    .side__menu {
-      width: 15%;
+      &.active {
+        background-color: #ff93ac;
+        color: #fff;
+      }
+    }
+  }
+  .mypage-section {
+    width: 85%;
+    margin: 0 auto;
+    margin-top: 5rem;
 
-      .side__title {
-        display: flex;
-        flex-direction: column;
-
-        >a {
-          padding: 20px;
-          text-align: center;
+    .mypage_info {
+      display: flex;
+      width: 100%;
+      padding: 20px;
+      .mypage_left {
+        width: 30%;
+        display: grid;
+        justify-items: center;
+        .profile_img {
+          width: 200px;
+          height: 200px;
+          border-radius: 100%;
+        }
+        .profile_chg {
+          width: 50%;
+          padding: 10px 20px;
+          background-color: #ff93ac;
+          font-size: 16px;
+          color: var(--white);
+          border: none;
+          margin-top: 2rem;
+          border-radius: 10px;
           cursor: pointer;
+        }
+      }
+      .mypage_right {
+        width: 70%;
+        margin-top: 3rem;
+
+        .info-row {
+          display: flex;
+          align-items: center;
+          width: 70%;
+          margin-bottom: 0.2rem;
+          border: 1px solid #ff93ac;
+          border-radius: 5px;
           color: var(--white);
 
-          &.active {
-            border-radius: 0 50px 50px 0;
-            transition: all 0.3s;
-            background-color: #ff93ac;
+          .info-label {
+            flex: 1;
+            padding: 5.5px;
+            font-weight: bold;
             color: var(--white);
+            background-color: #ff93ac;
           }
+
+          .info-input,
+          > p {
+            flex: 2;
+            padding: 5px 15px;
+            border: none;
+            color: #000;
+          }
+        }
+        .profile_chg {
+          width: 20%;
+          padding: 10px 20px;
+          background-color: #ff93ac;
+          font-size: 16px;
+          color: var(--white);
+          border: none;
+          margin-top: 2rem;
+          border-radius: 10px;
+          cursor: pointer;
         }
       }
     }
+  }
+}
 
-    .mypage_contents_wrap {
-      width: 85%;
+.activities-section {
+  margin: 0 auto;
+  width: 60%;
+  height: 1000px;
+
+  .activities-title {
+    margin-top: 20px;
+    text-align: center;
+  }
+
+  .activities-btn {
+    margin-left: 40px;
+    margin-top: 30px;
+    height: 40px;
+    width: 100%;
+    .my-nail {
       margin-left: 20px;
-      margin-top: 1rem;
+      margin-right: 30px;
+      border: 0;
+      font-size: 1.3rem;
+      background-color: #fff;
+      border-radius: 10px;
+      padding: 10px;
+      cursor: pointer;
 
-      .mypage_profile {
-        display: block;
-
-        >form {
-          margin-left: 40px;
-          display: flex;
-          flex-direction: column;
-          gap: 10px;
-
-          >h2 {
-            font-size: 28px;
-            font-weight: 500;
-          }
-
-          >div {
-            >p {
-              width: 240px;
-              height: 48px;
-              display: flex;
-              align-items: center;
-            }
-          }
-
-
-          >div {
-            display: flex;
-            align-items: center;
-            justify-content: flex-start;
-
-
-            >label {
-              width: 240px;
-            }
-
-            >input {
-              width: 320px;
-            }
-          }
-
-          .slide_pass {
-            display: flex;
-            align-items: center;
-
-            .input-container {
-              position: relative;
-            }
-
-            .toggle-icon {
-              position: absolute;
-              right: 8px;
-              top: 50%;
-              transform: translateY(-50%);
-              cursor: pointer;
-              font-size: 18px;
-              color: rgb(51 51 51 / 27%);
-              width: 30px;
-              text-align: center;
-
-              &:hover {
-                cursor: pointer;
-              }
-            }
-          }
-
-          .btn {
-            display: flex;
-            align-items: center;
-            justify-content: flex-start;
-
-
-            >button {
-              border: 0;
-              width: 136px;
-              height: 56px;
-              background-color: #2460F9;
-              border-radius: 0.5rem;
-              font-size: 16px;
-              color: var(--baseColor);
-              font-weight: 600;
-              transition: all 0.3s;
-              margin-top: 80px;
-
-              &:hover {
-                background-color: var(--baseColor);
-                color: #2460F9;
-                border: 1px solid #2460F9;
-              }
-            }
-          }
-        }
-
+      &:hover {
+        text-decoration: underline;
       }
 
-      .mypage_custom {
-        display: none;
-        margin-left: 40px;
-        width: 630px;
+      &:active {
+        text-decoration: underline;
+      }
+    }
+    .my-review {
+      border: 0;
+      font-size: 1.3rem;
+      background-color: #fff;
+      border-radius: 10px;
+      padding: 10px;
+      cursor: pointer;
+      &:hover {
+        text-decoration: underline;
+      }
 
-        >h2 {
-          margin: 40px 0;
-          font-size: 28px;
-          font-weight: 500;
+      &:active {
+        text-decoration: underline;
+      }
+    }
+  }
+  .my-review-box {
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    .view-card {
+      border-radius: 30px;
+      margin: 30px;
+      width: 400px;
+      height: 500px;
+      position: relative;
+      border: 1px solid #000;
+
+      .card-title {
+        text-align: center;
+      }
+      .card-text {
+        height: 120px;
+        padding: 10px;
+      }
+    }
+
+    .view-btn-box {
+      bottom: 40px;
+      position: absolute;
+      width: 100%;
+      margin: 0 auto;
+      justify-content: center;
+      display: flex;
+      .view-btn {
+        border: 0;
+        padding: 10px;
+        margin-left: 10px;
+        width: 100px;
+        border-radius: 10px;
+        cursor: pointer;
+        background-color: #fff;
+        border: 1px solid #000;
+
+        &:hover {
+          background-color: #b0b0b0;
         }
+      }
+    }
+  }
+  .my-nail-box {
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
 
-        .box_wrapper {
-          display: flex;
-          flex-direction: row;
-          flex-wrap: wrap;
-          justify-content: flex-start;
-          align-items: flex-start;
-          gap: 10px;
-          margin-top: 10px;
+    img {
+      height: 150px;
+      width: 150px;
+    }
+    .view-card {
+      border-radius: 30px;
+      margin: 30px;
+      width: 200px;
+      height: 250px;
+      position: relative;
+      overflow: hidden;
+      border: 1px solid #000;
 
-          .box {
-            width: 200px;
-            height: 250px;
-            border: 1px solid var(--pointColor1);
-            cursor: pointer;
-            justify-content: center;
-            align-items: center;
-            display: flex;
-            flex-direction: column;
+      .card-title {
+        font-size: 18px;
+      }
+      .card-text {
+        height: 120px;
+        padding: 10px;
+      }
+    }
 
-            .image_box {
-              width: 180px;
-              height: 180px;
-              background-position: center;
-              background-repeat: no-repeat;
-              background-size: contain;
-            }
+    .view-btn-box {
+      bottom: 40px;
+      position: absolute;
+      width: 100%;
+      margin: 0 auto;
+      justify-content: center;
+      display: flex;
+      .view-btn {
+        border: 0;
+        padding: 10px;
+        margin-left: 10px;
+        width: 100px;
+        border-radius: 10px;
+        cursor: pointer;
+        background-color: #fff;
+        border: 1px solid #000;
 
-            >p {
-              color: var(--blackColor200);
-              font-size: 14px;
-              padding-top: 10px;
-            }
-          }
-
+        &:hover {
+          background-color: #b0b0b0;
         }
       }
     }
