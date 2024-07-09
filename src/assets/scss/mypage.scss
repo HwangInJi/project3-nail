@@ -23,14 +23,14 @@
 .mypage-container {
   height: 80vh;
   display: flex;
-  width: 100%;
+  width: 65%;
+  margin: 0 auto;
   .top-line {
     margin-bottom: 30px;
     width: 100%;
     border: 1px solid #f7f7f7;
   }
   .mypage-menu {
-    // background-color: #ffc2cd;
     height: 100%;
     width: 15%;
 
@@ -47,18 +47,16 @@
       font-family: var(--fontF);
       background-color: #fff;
       color: #000;
-      border-radius: 0 50px 50px 0;
       cursor: pointer;
       &:hover {
         width: 100%;
-        background-color: #ff93ac;
+        background-color: #ff93ac5d;
         opacity: 1;
         color: #fff;
       }
 
       &.active {
-        background-color: #ff93ac;
-        color: #fff;
+        color: #ff93ac;
       }
     }
   }
