@@ -1,171 +1,177 @@
 "use client";
-import { useState } from "react";
+
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
+import Link from "next/link";
+import React, { useState } from "react";
 
 export default function Page() {
-  const [showMyPage, setShowMyPage] = useState(true);
-  const [showNailBox, setShowNailBox] = useState(true);
-  const [activeButton, setActiveButton] = useState("mypage");
+  const [isEditing, setIsEditing] = useState(false);
+  const [email, setEmail] = useState("dlswl1993@gmail.com");
+  const [newEmail, setNewEmail] = useState(email);
+  const [name, setName] = useState("황인지");
+  const [newName, setNewName] = useState(name);
+  const [password, setPassword] = useState("");
+  const [newPassword, setNewPassword] = useState("");
+  const [activeTab, setActiveTab] = useState("내 정보"); // 현재 활성 탭 상태
 
-  const handleMyPageClick = () => {
-    setShowMyPage(true);
-    setActiveButton("mypage");
+  const handleButtonClick = () => {
+    document.getElementById("imageUpload").click();
   };
 
-  const handleActivitiesClick = () => {
-    setShowMyPage(false);
-    setActiveButton("activities");
+  const handleEditClick = () => {
+    setIsEditing(true);
   };
 
-  const handleNailClick = () => {
-    setShowNailBox(true);
+  const handleCancelClick = () => {
+    setIsEditing(false);
+    setNewEmail(email);
+    setNewName(name);
+    setPassword("");
+    setNewPassword("");
   };
 
-  const handleReviewClick = () => {
-    setShowNailBox(false);
+  const handleSaveClick = () => {
+    setEmail(newEmail);
+    setName(newName);
+    setIsEditing(false);
+    // 비밀번호 업데이트 로직 추가 가능
   };
 
   return (
     <>
       <Header />
-      <section id="mypage">
-        <div className="top-line"></div>
-        <div className="mypage-container">
-          <div className="mypage-menu">
-            <button
-              className={`mypage-btn ${
-                activeButton === "mypage" ? "active" : ""
-              }`}
-              onClick={handleMyPageClick}
-            >
-              회원 정보 및 변경
-            </button>
-            <button
-              className={`my-activities-btn ${
-                activeButton === "activities" ? "active" : ""
-              }`}
-              onClick={handleActivitiesClick}
-            >
-              나의 활동
-            </button>
-          </div>
-          {showMyPage ? (
-            <div className="mypage-section">
-              <div className="mypage_info">
-                <div className="mypage_left">
-                  <img
-                    src="../img/01.jpeg"
-                    alt="프로필이미지"
-                    className="profile_img"
-                  />
-                  <button className="profile_chg">프로필 사진 변경</button>
-                </div>
+      <div className="mypage_top"></div>
+      <main className="mypage_info">
+        <div className="mypage_left">
+          <ul>
+            <li>
+              <Link href="/mypage" legacyBehavior>
+                <a
+                  className={activeTab === "내 정보" ? "active" : ""}
+                  onClick={() => setActiveTab("내 정보")}
+                >
+                  내 정보
+                </a>
+              </Link>
+            </li>
+          </ul>
 
-                <div className="mypage_right">
-                  <div className="info-row">
-                    <span className="info-label">현재 닉네임</span>
-                    <p>남윤서</p>
-                  </div>
-                  <div className="info-row">
-                    <span className="info-label">닉네임</span>
-                    <input
-                      className="info-input"
-                      type="text"
-                      placeholder="변경할 닉네임을 입력해주세요."
-                    />
-                  </div>
-                  <div className="info-row">
-                    <span className="info-label">현재 비밀번호</span>
-                    <input
-                      className="info-input"
-                      type="password"
-                      placeholder="현재 비밀번호를 입력해주세요."
-                    />
-                  </div>
-                  <div className="info-row">
-                    <span className="info-label">새 비밀번호</span>
-                    <input
-                      className="info-input"
-                      type="password"
-                      placeholder="새 비밀번호를 입력해주세요."
-                    />
-                  </div>
-                  <button className="profile_chg">변경하기</button>
-                </div>
-              </div>
-            </div>
-          ) : (
-            <div className="activities-section">
-              <h2 className="activities-title">나의 활동</h2>
-              <div className="activities-btn">
-                <button className="my-nail" onClick={handleNailClick}>
-                  내가 찜한 네일샵
-                </button>
-                <button className="my-review" onClick={handleReviewClick}>
-                  내가 작성한 리뷰
-                </button>
-              </div>
-              {showNailBox ? (
-                <div className="my-nail-box">
-                  <div className="view-card">
-                    <img src="../../img/02.png" alt="아무사진 넣음" />
-                    <h1 className="card-title">OOO 네일샵</h1>
-                    <p className="card-text">
-                      경기도 안산시 상록구 어쩌고 위치함
-                    </p>
-                    <div className="view-btn-box"></div>
-                  </div>
-                  <div className="view-card">
-                    <img src="../../img/02.png" alt="아무사진 넣음" />
-                    <h1 className="card-title">OOO 네일샵</h1>
-                    <p className="card-text">
-                      경기도 안산시 단원구 어쩌고 저쩌고
-                    </p>
-                    <div className="view-btn-box"></div>
-                  </div>
-                  <div className="view-card">
-                    <img src="../../img/02.png" alt="아무사진 넣음" />
-                    <h1 className="card-title">XXX 네일샵</h1>
-                    <p className="card-text">asdasdsad</p>
-                    <div className="view-btn-box"></div>
-                  </div>
-                </div>
-              ) : (
-                <div className="my-review-box">
-                  <div className="view-card">
-                    <img src="../../img/02.png" alt="아무사진 넣음" />
-                    <h1 className="card-title">네일 개망했네요 ㅠㅠ</h1>
-                    <p className="card-text">asdasdsad</p>
-                    <div className="view-btn-box">
-                      <button className="view-btn">수정</button>
-                      <button className="view-btn">삭제</button>
-                    </div>
-                  </div>
-                  <div className="view-card">
-                    <img src="../../img/02.png" alt="아무사진 넣음" />
-                    <h1 className="card-title">OOO 네일에서 너무 잘 됐어요</h1>
-                    <p className="card-text">asdasdsad</p>
-                    <div className="view-btn-box">
-                      <button className="view-btn">수정</button>
-                      <button className="view-btn">삭제</button>
-                    </div>
-                  </div>
-                  <div className="view-card">
-                    <img src="../../img/02.png" alt="아무사진 넣음" />
-                    <h1 className="card-title">제 네일 한 거 좀 봐주십쇼</h1>
-                    <p className="card-text">asdasdsad</p>
-                    <div className="view-btn-box">
-                      <button className="view-btn">수정</button>
-                      <button className="view-btn">삭제</button>
-                    </div>
-                  </div>
-                </div>
-              )}
-            </div>
-          )}
+          <ul>
+            <li>
+              <Link href="/save" legacyBehavior>
+                <a
+                  className={activeTab === "찜 목록" ? "active" : ""}
+                  onClick={() => setActiveTab("찜 목록")}
+                >
+                  찜 목록
+                </a>
+              </Link>
+            </li>
+          </ul>
         </div>
-      </section>
+
+        <div className="mypage_right">
+          <div className="mypage01">
+            <h2>내 프로필</h2>
+            <div className="myprofile">
+              <div className="image-container">
+                <img src="/img/02.png" alt="img" className="circle-image" />
+              </div>
+              <div className="my_btn" onClick={handleButtonClick}>
+                프로필 변경
+                <input
+                  type="file"
+                  accept="image/*"
+                  className="hidden"
+                  id="imageUpload"
+                  style={{ display: "none" }}
+                />
+              </div>
+            </div>
+          </div>
+
+          <div className="mypage02">
+            <h2>개인 정보</h2>
+            <div className="profile-info">
+              <div className="info-item">
+                <span className="info-label">이름</span>
+                {isEditing ? (
+                  <div className="info-edit">
+                    <input
+                      type="text"
+                      value={newName}
+                      onChange={(e) => setNewName(e.target.value)}
+                    />
+                  </div>
+                ) : (
+                  <div className="info-display">
+                    <span>{name}</span>
+                  </div>
+                )}
+              </div>
+              <div className="info-item">
+                <span className="info-label">이메일 주소</span>
+                {isEditing ? (
+                  <div className="info-edit">
+                    <input
+                      type="email"
+                      value={newEmail}
+                      onChange={(e) => setNewEmail(e.target.value)}
+                    />
+                  </div>
+                ) : (
+                  <div className="info-display">
+                    <span>{email}</span>
+                  </div>
+                )}
+              </div>
+              {isEditing && (
+                <>
+                  <div className="info-item">
+                    <span className="info-label">비밀번호</span>
+                    <div className="info-edit">
+                      <input
+                        type="password"
+                        value={password}
+                        onChange={(e) => setPassword(e.target.value)}
+                      />
+                    </div>
+                  </div>
+                  <div className="info-item">
+                    <span className="info-label">새 비밀번호</span>
+                    <div className="info-edit">
+                      <input
+                        type="password"
+                        value={newPassword}
+                        onChange={(e) => setNewPassword(e.target.value)}
+                      />
+                    </div>
+                  </div>
+                </>
+              )}
+              <div className="info-item">
+                {isEditing ? (
+                  <>
+                    <Link href="/" legacyBehavior>
+                      <button className="my_btn2" onClick={handleSaveClick}>
+                        저장
+                      </button>
+                    </Link>
+                    <button className="my_btn2" onClick={handleCancelClick}>
+                      취소
+                    </button>
+                  </>
+                ) : (
+                  <button className="my_btn2" onClick={handleEditClick}>
+                    수정
+                  </button>
+                )}
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
       <Footer />
     </>
   );

@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect, useState, Suspense } from "react";
+import React, { useEffect, useState, useRef, Suspense } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 import Link from "next/link";
 import { GoStar } from "react-icons/go";
@@ -15,6 +15,8 @@ function ShopListComponent() {
   const router = useRouter();
   const searchParams = useSearchParams();
   const address = searchParams.get("address") || "";
+  const loadMoreRef = useRef();
+  const observer = useRef();
 
   const fetchShops = async (page) => {
     setLoading(true);
@@ -52,6 +54,27 @@ function ShopListComponent() {
       });
     }
   };
+
+  useEffect(() => {
+    if (observer.current) observer.current.disconnect();
+
+    observer.current = new IntersectionObserver(
+      (entries) => {
+        if (entries[0].isIntersecting && hasMore) {
+          setTimeout(() => {
+            loadMore();
+          }, 2000); // 2초 후에 로드
+        }
+      },
+      { threshold: 1 }
+    );
+
+    if (loadMoreRef.current) observer.current.observe(loadMoreRef.current);
+
+    return () => {
+      if (observer.current) observer.current.disconnect();
+    };
+  }, [loading, hasMore]);
 
   return (
     <>
@@ -126,13 +149,7 @@ function ShopListComponent() {
           </div>
         ))}
       </div>
-      {hasMore && (
-        <div className="load-more">
-          <button onClick={loadMore} disabled={loading}>
-            {loading ? "로딩 중..." : "더보기"}
-          </button>
-        </div>
-      )}
+      <div ref={loadMoreRef} className="load-more"></div>
     </>
   );
 }

@@ -7,6 +7,7 @@
   gap: 20px;
   width: 90%;
   margin: 0 auto;
+  margin-bottom: 4rem;
 }
 
 .main__list {
@@ -37,7 +38,8 @@
 .list_icon {
   display: flex;
   justify-content: space-between;
-  > p {
+
+  >p {
     font-size: 18px;
   }
 }
@@ -59,12 +61,12 @@
   color: #555;
   align-items: center;
 
-  > p {
+  >p {
     display: flex;
     align-items: center;
     gap: 5px;
 
-    > svg {
+    >svg {
       width: 16px;
       height: 16px;
     }
@@ -90,7 +92,7 @@ em {
   margin: 0 auto;
   justify-content: left;
 
-  > svg {
+  >svg {
     margin-right: 10px;
   }
 }
@@ -104,7 +106,7 @@ em {
   justify-content: left;
   margin-top: 4rem;
 
-  > svg {
+  >svg {
     margin-right: 10px;
   }
 }
@@ -119,11 +121,13 @@ em {
   }
 
   .main__list {
-    width: auto; /* grid 레이아웃을 사용하기 때문에 너비 자동 설정 */
+    width: auto;
+    /* grid 레이아웃을 사용하기 때문에 너비 자동 설정 */
   }
 
   .list_item {
-    width: 100%; /* 각 grid 아이템이 가득 채우도록 설정 */
+    width: 100%;
+    /* 각 grid 아이템이 가득 채우도록 설정 */
   }
 }
 
@@ -136,11 +140,13 @@ em {
   }
 
   .main__list {
-    width: auto; /* grid 레이아웃을 사용하기 때문에 너비 자동 설정 */
+    width: auto;
+    /* grid 레이아웃을 사용하기 때문에 너비 자동 설정 */
   }
 
   .list_item {
-    width: 100%; /* 각 grid 아이템이 가득 채우도록 설정 */
+    width: 100%;
+    /* 각 grid 아이템이 가득 채우도록 설정 */
   }
 }
 
@@ -153,11 +159,13 @@ em {
   }
 
   .main__list {
-    width: auto; /* grid 레이아웃을 사용하기 때문에 너비 자동 설정 */
+    width: auto;
+    /* grid 레이아웃을 사용하기 때문에 너비 자동 설정 */
   }
 
   .list_item {
-    width: 100%; /* 각 grid 아이템이 가득 채우도록 설정 */
+    width: 100%;
+    /* 각 grid 아이템이 가득 채우도록 설정 */
   }
 }
 
@@ -170,11 +178,13 @@ em {
   }
 
   .main__list {
-    width: auto; /* grid 레이아웃을 사용하기 때문에 너비 자동 설정 */
+    width: auto;
+    /* grid 레이아웃을 사용하기 때문에 너비 자동 설정 */
   }
 
   .list_item {
-    width: 100%; /* 각 grid 아이템이 가득 채우도록 설정 */
+    width: 100%;
+    /* 각 grid 아이템이 가득 채우도록 설정 */
   }
 }
 
@@ -192,17 +202,20 @@ em {
     font-size: 20px;
     display: flex;
     align-items: center;
-    > svg {
+
+    >svg {
       width: 20px;
       height: 20px;
     }
   }
 
   .main__list {
-    width: auto; /* grid 레이아웃을 사용하기 때문에 너비 자동 설정 */
+    width: auto;
+    /* grid 레이아웃을 사용하기 때문에 너비 자동 설정 */
   }
 
   .list_item {
-    width: 100%; /* 각 grid 아이템이 가득 채우도록 설정 */
+    width: 100%;
+    /* 각 grid 아이템이 가득 채우도록 설정 */
   }
 }

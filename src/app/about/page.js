@@ -132,14 +132,19 @@ export default function AboutPage({ searchParams }) {
           </div>
           <div className="detail_right">
             <div className="detail__review">
-              <Link href="/write" className="wirte-button_a">
+              {/* <Link href="/write" className="wirte-button_a">
                 <button type="submit" className="review-button">
                   리뷰 작성
                 </button>
-              </Link>
+              </Link> */}
             </div>
           </div>
         </div>
+        <Link href="/write" className="wirte-button_a">
+          <button type="submit" className="review-button">
+            리뷰 작성
+          </button>
+        </Link>
         <div className="map">
           <h2>숙소 위치</h2>
           <img src="/img/map.jpg" alt="위치 지도" />
