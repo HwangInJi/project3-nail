@@ -106,7 +106,7 @@ export default function AboutPage({ searchParams }) {
               )}
             </div>
             <div className="info_text">
-              <h3>소개</h3>
+              <h2>소개</h2>
               <pre>{shop.introduction || '소개 정보가 없습니다'}</pre>
             </div>
             <div className="info_place">
@@ -146,7 +146,7 @@ export default function AboutPage({ searchParams }) {
           </button>
         </Link>
         <div className="map">
-          <h2>숙소 위치</h2>
+          <h2>네일샵 위치</h2>
           <img src="/img/map.jpg" alt="위치 지도" />
         </div>
       </main>

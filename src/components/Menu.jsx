@@ -36,18 +36,18 @@ export default function Menu() {
   const items = [
     { href: "/?address=", src: "/img/korea.png", label: "전체" },
     { href: "/?address=seoul", src: "/img/seoul.svg", label: "서울" },
-    { href: "/?address=busan", src: "/img/busan.svg", label: "부산" },
+    { href: "/?address=busan", src: "/img/busan.png", label: "부산" },
     { href: "/?address=incheon", src: "/img/incheon.svg", label: "인천" },
     { href: "/?address=gwangju", src: "/img/gwangju.svg", label: "광주" },
-    { href: "/?address=dajeun", src: "/img/dajeun.svg", label: "대전" },
-    { href: "/?address=ulsan", src: "/img/ulsan.svg", label: "울산" },
+    { href: "/?address=dajeun", src: "/img/dajeun.png", label: "대전" },
+    { href: "/?address=ulsan", src: "/img/ulsan.png", label: "울산" },
     { href: "/?address=sejong", src: "/img/sejong.svg", label: "세종" },
     {
       href: "/?address=gyeonggido",
-      src: "/img/gyeonggido.svg",
+      src: "/img/gyeonggido.png",
       label: "경기도",
     },
-    { href: "/?address=gangwon", src: "/img/gangwon.svg", label: "강원도" },
+    { href: "/?address=gangwon", src: "/img/gangwon.png", label: "강원도" },
     {
       href: "/?address=chungcheong",
       src: "/img/Chungcheong.svg",

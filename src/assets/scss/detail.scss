@@ -99,6 +99,8 @@
 .detail_info>h2 {
   margin-top: 20px;
   margin-bottom: 20px;
+  font-family: var(--fontN);
+  font-weight: 500;
 }
 
 .profile2>p {
@@ -112,6 +114,8 @@
 
 .details>h2 {
   margin-top: 20px;
+  font-family: var(--fontN);
+  font-weight: 500;
 }
 
 .detail_info2 {
@@ -148,10 +152,12 @@
   border-top: 1px solid #ccc;
 }
 
-.info_text>h3 {
+.info_text>h2 {
   font-weight: bold;
   font-size: 24px;
   margin-top: 20px;
+  font-family: var(--fontN);
+  font-weight: 500;
 }
 
 .info_text>pre {
@@ -165,13 +171,14 @@
 .info_place {
   border-top: 1px solid #ccc;
   margin-bottom: 20px;
-  padding: 20px 0;
 }
 
 .info_place>h2 {
   margin-top: 20px;
   margin-bottom: 20px;
   font-size: 24px;
+  font-family: var(--fontN);
+  font-weight: 500;
 }
 
 .info_place .place {
@@ -365,6 +372,8 @@
 .map h2 {
   margin-top: 20px;
   margin-bottom: 20px;
+  font-family: var(--fontN);
+  font-weight: 500;
 }
 
 .map>img {
