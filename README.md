@@ -1,8 +1,18 @@
 ## 전국 네일샵 익명 리뷰 사이트
-[오늘네일 사이트 전체 진행사항](https://onel.vercel.app/listpage)<br>
+
+[오늘네일 사이트 전체 페이지](https://onel.vercel.app/listpage)<br>
+
+### 코딩 완료 페이지
 [오늘네일 사이트 메인](https://onel.vercel.app/)<br>
 [오늘네일 사이트 상세보기](https://onel.vercel.app/about?shop_id=668c8af6540f62b402470378)<br>
 [오늘네일 사이트 로그인&회원가입](https://onel.vercel.app/login) & (https://onel.vercel.app/join)<br>
+[오늘네일 사이트 리뷰작성](https://onel.vercel.app/write)
+
+### 코딩 진행중인 페이지
+[오늘네일 사이트 나의활동](https://onel.vercel.app/mypage)<br>
+[오늘네일 사이트 비밀번호 찾기](https://onel.vercel.app/mypage)<br>
+
+추가 오류 수정 진행중 - 로딩소스, 이미지 없을시 대체 이미지, 파비콘, 경로설정 오류
 
 ### 📑 제작 의도
 
