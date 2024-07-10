@@ -8,77 +8,88 @@
     width: 60%;
     height: 100vh;
     margin: 0 auto;
-    display: flex;
-}
 
-.save_left {
-    width: 20%;
-    height: 20vh;
-    margin-top: 3rem;
-    border-right: 1px solid #000;
-
-    >ul {
-        font-family: var(--fontF);
-        font-size: 25px;
-        text-align: left;
-        margin-left: 1.5rem;
-    }
-
-    >ul a {
-        color: #000;
-        text-decoration: none;
-    }
-
-    >ul a.active {
-        color: #ff5a79;
-    }
-}
-
-.save_right {
-    width: 80%;
-    margin-top: 2rem;
-
-    .save01 {
-        width: 100%;
+    .save_title {
         display: flex;
-        flex-wrap: wrap;
-        gap: 1rem;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 2rem;
 
-        .list {
+
+        .prew {
+            cursor: pointer;
+        }
+
+        >button {
+            background-color: #fff;
+            padding: 5px 10px;
+            cursor: pointer;
+            border-radius: 8px;
+            text-decoration: underline;
+
+            &:hover {
+                background-color: #f0f0f0;
+                transition: all 0.3s;
+            }
+        }
+    }
+
+
+    >h2 {
+        font-size: 2rem;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+
+    }
+
+    .save_right {
+        .save01 {
             width: 100%;
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
+            display: flex;
+            flex-wrap: wrap;
             gap: 1rem;
-            margin-left: 3rem;
 
-            .main__list {
+            .list {
                 width: 100%;
+                display: grid;
+                grid-template-columns: repeat(4, 1fr);
+                gap: 2rem;
 
-                .list_item {
-                    display: flex;
-                    flex-direction: column;
-                    background-color: white;
-                    border-radius: 8px;
-                    overflow: hidden;
+                .main__list {
+                    width: 100%;
+                    margin-bottom: 1.5rem;
 
-                    .list_image {
-                        aspect-ratio: 1;
-                        object-fit: cover;
-                        border-radius: 8px;
-                        position: relative;
-                    }
-
-                    .list_text {
-                        margin-top: 10px;
-                        line-height: 1.5;
-                    }
-
-                    .list_icon {
+                    .list_item {
                         display: flex;
-                        justify-content: space-between;
+                        flex-direction: column;
+                        background-color: white;
+                        border-radius: 8px;
+                        overflow: hidden;
 
-                        >p {
-                            font-size: 18px;
+                        .list_image {
+                            aspect-ratio: 1;
+                            object-fit: cover;
+                            border-radius: 8px;
+                            position: relative;
+                        }
+
+                        .list_text {
+                            margin-top: 10px;
+                            line-height: 1.5;
+                        }
+
+                        .list_icon {
+                            display: flex;
+                            justify-content: space-between;
+
+                            >p {
+                                font-size: 18px;
+
+                                >svg {
+                                    width: 1rem;
+                                    height: 1rem;
+                                }
+                            }
                         }
                     }
                 }

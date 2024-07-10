@@ -1,4 +1,8 @@
 import "@/assets/scss/style.scss";
+import Footer from "@/components/Footer";
+import Header from "@/components/Header";
+import Top from "@/components/Top";
+import Main from "@/components/Main";
 
 export const metadata = {
   title: "Next.js",
@@ -15,7 +19,12 @@ export default function RootLayout({ children }) {
         <meta name="keywords" content={metadata.keywords.join(", ")} />
         <title>{metadata.title}</title>
       </head>
-      <body>{children}</body>
+      <body>
+        <Header />
+        <Main>{children}</Main>
+        <Top />
+        <Footer />
+      </body>
     </html>
   );
 }

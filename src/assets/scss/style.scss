@@ -2,12 +2,15 @@
 
 @import "fonts";
 @import "vars";
+@import "reset";
+@import "common";
 
 @import "header";
 @import "search";
 @import "menu";
 @import "list";
 @import "footer";
+@import "scrollTop";
 
 @import "detail";
 @import "write";

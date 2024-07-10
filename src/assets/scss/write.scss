@@ -1,6 +1,12 @@
+.write_divider {
+  width: 100vw;
+  border: 1px solid #f7f7f7;
+  margin-top: 2rem;
+}
+
 .reviewWrite {
   width: 60%;
-  height: 130vh;
+  height: 140vh;
   margin: 0 auto;
   display: flex;
 
@@ -9,6 +15,7 @@
     height: 60vh;
     margin-top: 3rem;
     border-right: 1px solid #000;
+    overflow: hidden;
 
     >h1 {
       font-family: var(--fontF);
@@ -74,13 +81,17 @@
       }
 
       .rating {
-        .star {
-          font-size: 2rem;
-          color: #ff93ac;
-          margin: 0 5px;
-          width: 30px;
-          height: 30px;
+        display: flex;
+
+        >div {
+          >svg {
+            width: 5rem;
+            height: 7rem;
+            cursor: pointer;
+          }
         }
+
+        .star {}
       }
     }
 

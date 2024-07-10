@@ -18,8 +18,8 @@
   border-right: 1px solid #000;
 
   >ul {
-    font-family: var(--fontF);
-    font-size: 25px;
+    font-family: var(--fontS);
+    font-size: 2rem;
     text-align: left;
     margin-left: 1.5rem;
   }
@@ -43,8 +43,7 @@
     margin-bottom: 2rem;
 
     >h2 {
-      font-size: 30px;
-      font-weight: bold;
+      font-size: 2rem;
     }
 
     .myprofile {
@@ -90,8 +89,7 @@
     margin-top: 4rem;
 
     >h2 {
-      font-size: 30px;
-      font-weight: bold;
+      font-size: 2rem;
     }
 
     .profile-info {
@@ -103,9 +101,7 @@
         align-items: center;
         margin-bottom: 10px;
 
-        .info-label {
-          font-weight: bold;
-        }
+        .info-label {}
 
         .info-edit {
           display: flex;
