@@ -3,9 +3,6 @@
 import React, { useEffect, useState, useRef, Suspense } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 import Link from "next/link";
-import { GoStar } from "react-icons/go";
-import { BsChatSquareText } from "react-icons/bs";
-import { BsShop } from "react-icons/bs";
 
 function ShopListComponent() {
   const [shops, setShops] = useState([]);
