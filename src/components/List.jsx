@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect, useState, useRef, Suspense } from "react";
+import React, { useEffect, useState, Suspense } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 import Link from "next/link";
 import { GoStar } from "react-icons/go";
@@ -15,8 +15,6 @@ function ShopListComponent() {
   const router = useRouter();
   const searchParams = useSearchParams();
   const address = searchParams.get("address") || "";
-  const loadMoreRef = useRef();
-  const observer = useRef();
 
   const fetchShops = async (page) => {
     setLoading(true);
@@ -55,30 +53,12 @@ function ShopListComponent() {
     }
   };
 
-  useEffect(() => {
-    if (observer.current) observer.current.disconnect();
-
-    observer.current = new IntersectionObserver(
-      (entries) => {
-        if (entries[0].isIntersecting && hasMore) {
-          setTimeout(() => {
-            loadMore();
-          }, 2000); // 2초 후에 로드
-        }
-      },
-      { threshold: 1 }
-    );
-
-    if (loadMoreRef.current) observer.current.observe(loadMoreRef.current);
-
-    return () => {
-      if (observer.current) observer.current.disconnect();
-    };
-  }, [loading, hasMore]);
-
   return (
     <>
-      <div className="ratelist">평점 높은 네일샵</div>
+      <div className="ratelist">
+        <GoStar />
+        평점 높은 네일샵
+      </div>
       <div className="list">
         {shops.slice(0, 6).map((shop) => (
           <div className="main__list" key={`${shop._id}-rating`}>
@@ -92,17 +72,16 @@ function ShopListComponent() {
                 <div className="list_text">
                   <span className="list_title">{shop.title}</span>
                 </div>
-                <div className="list_icon">
-                  <p>리뷰 : 3개</p>
-                  <p>평점 : ★★★★☆</p>
-                </div>
               </div>
             </Link>
           </div>
         ))}
       </div>
 
-      <div className="reviewlist">리뷰 많은 네일샵</div>
+      <div className="reviewlist">
+        <BsChatSquareText />
+        리뷰 많은 네일샵
+      </div>
       <div className="list">
         {shops.slice(0, 6).map((shop, i) => (
           <div className="main__list" key={i}>
@@ -116,17 +95,16 @@ function ShopListComponent() {
                 <div className="list_text">
                   <span className="list_title">{shop.title}</span>
                 </div>
-                <div className="list_icon">
-                  <p>리뷰 : 3개</p>
-                  <p>평점 : ★★★★☆</p>
-                </div>
               </div>
             </Link>
           </div>
         ))}
       </div>
 
-      <div className="allist">네일샵 전체 보기</div>
+      <div className="allist">
+        <BsShop />
+        네일샵 전체 보기
+      </div>
       <div className="list">
         {shops.map((shop, i) => (
           <div className="main__list" key={i}>
@@ -140,16 +118,18 @@ function ShopListComponent() {
                 <div className="list_text">
                   <span className="list_title">{shop.title}</span>
                 </div>
-                <div className="list_icon">
-                  <p>리뷰 : 3개</p>
-                  <p>평점 : ★★★★☆</p>
-                </div>
               </div>
             </Link>
           </div>
         ))}
       </div>
-      <div ref={loadMoreRef} className="load-more"></div>
+      {hasMore && (
+        <div className="load-more">
+          <button onClick={loadMore} disabled={loading}>
+            {loading ? "로딩 중..." : "더보기"}
+          </button>
+        </div>
+      )}
     </>
   );
 }

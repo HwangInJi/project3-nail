@@ -6,15 +6,14 @@ import Link from "next/link";
 import { FaRegStar } from "react-icons/fa";
 
 export default function WritePage() {
-
   return (
     <>
-      <Header />
-      <Search />
+      <hr className="write_divider" />
       <main className="reviewWrite">
         <div className="write_left">
           <h1>
-            여기 네일샵은<br />
+            여기 네일샵은
+            <br />
             어떠셨나요?
           </h1>
 
@@ -50,15 +49,21 @@ export default function WritePage() {
 
           <div className="write02">
             <h2>리뷰 제목</h2>
-            <input placeholder="리뷰제목을 입력해주세요." rows="1" minlength="20">
-            </input>
+            <input
+              placeholder="리뷰제목을 입력해주세요."
+              rows="1"
+              minlength="20"
+            ></input>
             <p>20자이내로 작성 가능합니다.</p>
           </div>
 
           <div className="write03">
             <h2>리뷰 내용</h2>
-            <input placeholder="리뷰내용을 입력해주세요." rows="50" minlength="1500">
-            </input>
+            <input
+              placeholder="리뷰내용을 입력해주세요."
+              rows="50"
+              minlength="1500"
+            ></input>
             <p>1,500자이내로 작성 가능합니다.</p>
           </div>
 
@@ -84,7 +89,6 @@ export default function WritePage() {
           </Link>
         </div>
       </main>
-      <Footer />
     </>
   );
 }

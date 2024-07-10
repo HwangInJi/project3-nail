@@ -7,8 +7,6 @@ import Link from "next/link";
 import { FaLink } from "react-icons/fa6";
 import { IoMdHeartEmpty } from "react-icons/io";
 import { CiStar } from "react-icons/ci";
-import FilledStar from "@/components/FilledStar";
-import Star from "@/components/Star";
 
 async function fetchShopData(shop_id) {
   const res = await fetch(`/api/shop/${shop_id}`);
@@ -50,7 +48,7 @@ export default function AboutPage({ searchParams }) {
 
       if (midElement && leftElement && rightElement) {
         const bottomMargin =
-          5 * parseFloat(getComputedStyle(document.documentElement).fontSize);
+          7 * parseFloat(getComputedStyle(document.documentElement).fontSize);
 
         gsap.to(rightElement, {
           y: () =>
@@ -116,7 +114,6 @@ export default function AboutPage({ searchParams }) {
             </button>
           </div>
         </div>
-
         <div className="gallery-container">
           <div className="gallery-item-large">
             <img
@@ -140,7 +137,6 @@ export default function AboutPage({ searchParams }) {
             )}
           </div>
         </div>
-
         <div className="detail_mid">
           <div className="detail_left" ref={detailLeftRef}>
             <div className="detail_info">
@@ -212,10 +208,10 @@ export default function AboutPage({ searchParams }) {
                 ) : (
                   <p>가격 정보가 없습니다</p>
                 )}
-                <Link href="/write" className="review-button">
-                  리뷰 작성
-                </Link>
               </div>
+              <Link href="/write" className="review-button">
+                리뷰 작성
+              </Link>
             </div>
           </div>
         </div>
@@ -230,7 +226,6 @@ export default function AboutPage({ searchParams }) {
         </div>
 
         <div className="review_view">
-          <h2>이용 후기</h2>
           <div className="comment_all">
             <div className="comment">
               <div className="comment_header">
@@ -243,24 +238,21 @@ export default function AboutPage({ searchParams }) {
                   <div className="comment_nick">주인장</div>
                   <div className="comment_rating">
                     <div className="stars">
-                      {[...Array(3)].map((_, i) => (
-                        <FilledStar
-                          key={`filled-${i}`}
-                          className="star-icon"
-                          color="#FFD700"
-                          size={24}
-                        />
-                      ))}
-                      {[...Array(2)].map((_, i) => (
-                        <Star
-                          key={`empty-${i}`}
-                          className="star-icon"
-                          color="#FFD700"
-                          size={48}
-                        />
+                      {[...Array(5)].map((_, i) => (
+                        <CiStar key={i} className="star-icon" />
                       ))}
                     </div>
                   </div>
+                </div>
+              </div>
+              <div className="review_img">
+                <div className="image-container">
+                  <img
+                    src="https://search.pstatic.net/common/?src=https%3A%2F%2Fpup-review-phinf.pstatic.net%2FMjAyNDA2MTJfOTMg%2FMDAxNzE4MTg4NjY5NDg1.nRr9k141ZpOHve8H4oS-Ek0wPzbYlaGFlKGu7r497Tog.eJkThHvmlRk8oBpORUfNI4WmDlz5nWoxhUMYz45cPOwg.JPEG%2FD64531E1-2F21-47F1-9021-43999FDCB28C.jpeg%3Ftype%3Dw1500_60_sharpen"
+                    alt="리뷰 이미지"
+                    layout="fill"
+                    objectFit="cover"
+                  />
                 </div>
               </div>
               <p className="comment_text">
@@ -287,18 +279,22 @@ export default function AboutPage({ searchParams }) {
                   <div className="comment_rating">
                     <div className="stars">
                       {[...Array(5)].map((_, i) => (
-                        <FilledStar
-                          key={i}
-                          className="star-icon"
-                          color="#FFD700"
-                          size={48}
-                        />
+                        <CiStar key={i} className="star-icon" />
                       ))}
                     </div>
                   </div>
                 </div>
               </div>
-
+              <div className="review_img">
+                <div className="image-container">
+                  <img
+                    src="https://search.pstatic.net/common/?src=https%3A%2F%2Fpup-review-phinf.pstatic.net%2FMjAyNDA2MTlfMjE0%2FMDAxNzE4NzU3MzIxMDYw.LvRy2Dbd169fSSuhYrspUxiPZjiOiH5KPWWCakSBpZog.ih6OAkQ-F-7rkUnvc-ciwsZJDsiNFaPojQCH2_5qkwEg.JPEG%2F1718756817463.jpg.jpg%3Ftype%3Dw1500_60_sharpen"
+                    alt="img"
+                    layout="fill"
+                    objectFit="cover"
+                  />
+                </div>
+              </div>
               <p className="comment_text">
                 모든 것이 훌륭합니다. 이미 추천했습니다. 👌🏼
               </p>
@@ -316,15 +312,20 @@ export default function AboutPage({ searchParams }) {
                   <div className="comment_rating">
                     <div className="stars">
                       {[...Array(5)].map((_, i) => (
-                        <FilledStar
-                          key={i}
-                          className="star-icon"
-                          color="#FFD700"
-                          size={48}
-                        />
+                        <CiStar key={i} className="star-icon" />
                       ))}
                     </div>
                   </div>
+                </div>
+              </div>
+              <div className="review_img">
+                <div className="image-container">
+                  <img
+                    src="https://search.pstatic.net/common/?src=https%3A%2F%2Fpup-review-phinf.pstatic.net%2FMjAyNDA2MTJfOTMg%2FMDAxNzE4MTg4NjY5NDg1.nRr9k141ZpOHve8H4oS-Ek0wPzbYlaGFlKGu7r497Tog.eJkThHvmlRk8oBpORUfNI4WmDlz5nWoxhUMYz45cPOwg.JPEG%2FD64531E1-2F21-47F1-9021-43999FDCB28C.jpeg%3Ftype%3Dw1500_60_sharpen"
+                    alt="리뷰 이미지"
+                    layout="fill"
+                    objectFit="cover"
+                  />
                 </div>
               </div>
               <p className="comment_text">
@@ -351,18 +352,22 @@ export default function AboutPage({ searchParams }) {
                   <div className="comment_rating">
                     <div className="stars">
                       {[...Array(5)].map((_, i) => (
-                        <FilledStar
-                          key={i}
-                          className="star-icon"
-                          color="#FFD700"
-                          size={48}
-                        />
+                        <CiStar key={i} className="star-icon" />
                       ))}
                     </div>
                   </div>
                 </div>
               </div>
-
+              <div className="review_img">
+                <div className="image-container">
+                  <img
+                    src="https://search.pstatic.net/common/?src=https%3A%2F%2Fpup-review-phinf.pstatic.net%2FMjAyNDA2MTlfMjE0%2FMDAxNzE4NzU3MzIxMDYw.LvRy2Dbd169fSSuhYrspUxiPZjiOiH5KPWWCakSBpZog.ih6OAkQ-F-7rkUnvc-ciwsZJDsiNFaPojQCH2_5qkwEg.JPEG%2F1718756817463.jpg.jpg%3Ftype%3Dw1500_60_sharpen"
+                    alt="img"
+                    layout="fill"
+                    objectFit="cover"
+                  />
+                </div>
+              </div>
               <p className="comment_text">
                 모든 것이 훌륭합니다. 이미 추천했습니다. 👌🏼
               </p>

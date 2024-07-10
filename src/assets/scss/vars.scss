@@ -1,8 +1,9 @@
 :root {
   // --fontN: "wooriDaum";
-  --fontF: "Pretendard-Regular";
+  --fontF: "Pretendard";
   --fontL: "LOTTERIACHAB";
   --fontN: "Noto Sans KR";
+  --fontS: "Spoqa Han Sans Neo";
 
   --mainBg-color: #f3ede8;
   --subBg100: #cdc0b1;
@@ -18,10 +19,10 @@
   --black300: #686868;
   --black400: #e0e0e0;
 
-  font-family: var(--fontF), var(--fontL), var(--fontN);
+  font-family: var(--fontF);
   font-size: 16px;
   line-height: 1.5;
-  font-weight: 300;
+  font-weight: 500;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;

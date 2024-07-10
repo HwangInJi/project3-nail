@@ -1,3 +1,9 @@
+.write_divider {
+  width: 100vw;
+  border: 1px solid #f7f7f7;
+  margin-top: 2rem;
+}
+
 .reviewWrite {
   width: 60%;
   height: 130vh;
@@ -9,8 +15,9 @@
     height: 60vh;
     margin-top: 3rem;
     border-right: 1px solid #000;
+    overflow: hidden;
 
-    >h1 {
+    > h1 {
       font-family: var(--fontF);
       font-size: 40px;
       text-align: left;
@@ -47,7 +54,7 @@
             display: flex;
             justify-content: space-between;
 
-            >p {
+            > p {
               font-size: 18px;
             }
           }
@@ -68,7 +75,7 @@
     .write01 {
       margin-bottom: 2rem;
 
-      >h2 {
+      > h2 {
         font-size: 30px;
         font-weight: bold;
       }
@@ -87,19 +94,19 @@
     .write02 {
       margin-bottom: 2rem;
 
-      >h2 {
+      > h2 {
         font-size: 30px;
         font-weight: bold;
       }
 
-      >input {
+      > input {
         width: 90%;
         padding: 10px;
         border-radius: 8px;
         border: 1px solid #ccc;
       }
 
-      >p {
+      > p {
         width: 90%;
         font-size: 14px;
         text-align: right;
@@ -110,12 +117,12 @@
     .write03 {
       margin-bottom: 2rem;
 
-      >h2 {
+      > h2 {
         font-size: 30px;
         font-weight: bold;
       }
 
-      >input {
+      > input {
         width: 90%;
         height: 30vh;
         padding: 10px;
@@ -123,7 +130,7 @@
         border: 1px solid #ccc;
       }
 
-      >p {
+      > p {
         width: 90%;
         font-size: 14px;
         text-align: right;
@@ -134,7 +141,7 @@
     .write04 {
       margin-bottom: 2rem;
 
-      >h2 {
+      > h2 {
         font-size: 30px;
         font-weight: bold;
       }

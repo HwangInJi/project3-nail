@@ -40,7 +40,6 @@ export default function Page() {
 
   return (
     <>
-      <Header />
       <div className="mypage_top"></div>
       <main className="mypage_info">
         <div className="mypage_left">
@@ -132,6 +131,7 @@ export default function Page() {
                     <span className="info-label">비밀번호</span>
                     <div className="info-edit">
                       <input
+                        placeholder="새 비밀번호를 입력하세요."
                         type="password"
                         value={password}
                         onChange={(e) => setPassword(e.target.value)}
@@ -142,6 +142,7 @@ export default function Page() {
                     <span className="info-label">새 비밀번호</span>
                     <div className="info-edit">
                       <input
+                        placeholder="새 비밀번호를 한번 더 입력하세요."
                         type="password"
                         value={newPassword}
                         onChange={(e) => setNewPassword(e.target.value)}
@@ -172,7 +173,6 @@ export default function Page() {
           </div>
         </div>
       </main>
-      <Footer />
     </>
   );
 }

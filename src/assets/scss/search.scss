@@ -23,8 +23,8 @@
 }
 
 .search-bar label {
-  font-size: 12px;
-  font-weight: normal;
+  font-size: 1rem;
+  font-family: var(--fontF);
   color: #000;
 }
 
@@ -32,6 +32,7 @@
   border: none;
   border-radius: 4px;
   width: 150px;
+  font-size: 1rem;
 }
 
 .search-bar input[type="text"]::placeholder {
