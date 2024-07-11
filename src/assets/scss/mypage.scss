@@ -1,48 +1,60 @@
 .mypage_top {
   width: 100%;
-  margin-top: 3rem;
+  margin-top: 1.5rem;
   border: 1px solid #f7f7f7;
 }
 
 .mypage_info {
-  width: 60%;
+  width: 70%;
   height: 100vh;
   margin: 0 auto;
-  display: flex;
-}
+  overflow: auto; /* 스크롤 가능하게 설정 */
 
-.mypage_left {
-  width: 20%;
-  height: 20vh;
-  margin-top: 3rem;
-  border-right: 1px solid #000;
+  /* 웹킷 브라우저(크롬, 사파리 등)에서 스크롤바 숨기기 */
+  &::-webkit-scrollbar {
+    width: 0; /* 스크롤바 너비를 0으로 설정 */
+    height: 0;
+  }
 
-  >ul {
-    font-family: var(--fontS);
+  .mypage_title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 2rem;
+
+    .prew {
+      cursor: pointer;
+    }
+
+    > button {
+      background-color: #fff;
+      padding: 5px 10px;
+      cursor: pointer;
+      border-radius: 8px;
+      text-decoration: underline;
+
+      &:hover {
+        background-color: #f0f0f0;
+        transition: all 0.3s;
+      }
+    }
+  }
+
+  > h2 {
     font-size: 2rem;
-    text-align: left;
-    margin-left: 1.5rem;
-  }
-
-  >ul a {
-    color: #000;
-    text-decoration: none;
-  }
-
-  >ul a.active {
-    color: #ff5a79;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
   }
 }
 
 .mypage_right {
-  width: 50%;
-  margin-top: 3rem;
-  margin-left: 3rem;
+  width: 100%;
+  margin: 0 auto;
 
   .mypage01 {
     margin-bottom: 2rem;
 
-    >h2 {
+    > h2 {
       font-size: 2rem;
     }
 
@@ -85,10 +97,11 @@
   }
 
   .mypage02 {
-    width: 100%;
+    width: 70%;
     margin-top: 4rem;
+    margin: 0 auto;
 
-    >h2 {
+    > h2 {
       font-size: 2rem;
     }
 
@@ -101,34 +114,23 @@
         align-items: center;
         margin-bottom: 10px;
 
-        .info-label {}
+        .info-label {
+        }
 
         .info-edit {
           display: flex;
           align-items: center;
 
-          >input {
-            width: 100%;
+          > input {
+            width: 18vw;
             padding: 10px;
+            text-align: end;
           }
         }
 
         .info-display {
           display: flex;
           align-items: center;
-        }
-
-        .my_btn2 {
-          padding: 8px 15px;
-          border: none;
-          border-radius: 4px;
-          background-color: #ff5a79;
-          color: white;
-          cursor: pointer;
-
-          &:hover {
-            background-color: #ff5a79;
-          }
         }
       }
     }

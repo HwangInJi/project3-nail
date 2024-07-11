@@ -1,7 +1,7 @@
 .write_divider {
   width: 100vw;
   border: 1px solid #f7f7f7;
-  margin-top: 2rem;
+  margin-top: 1.5rem;
 }
 
 .reviewWrite {
@@ -17,8 +17,8 @@
     border-right: 1px solid #000;
     overflow: hidden;
 
-    >h1 {
-      font-family: var(--fontF);
+    > h1 {
+      font-family: var(--fontS);
       font-size: 40px;
       text-align: left;
       margin-left: 1.5rem;
@@ -54,8 +54,13 @@
             display: flex;
             justify-content: space-between;
 
-            >p {
+            > p {
               font-size: 18px;
+
+              > svg {
+                width: 1rem;
+                height: 1rem;
+              }
             }
           }
         }
@@ -67,15 +72,18 @@
     width: 60%;
     margin-top: 3rem;
     margin-left: 3rem;
+    overflow: auto; /* 스크롤 가능하게 설정 */
 
-    .write_right::-webkit-scrollbar {
-      width: 0;
+    /* 웹킷 브라우저(크롬, 사파리 등)에서 스크롤바 숨기기 */
+    &::-webkit-scrollbar {
+      width: 0; /* 스크롤바 너비를 0으로 설정 */
+      height: 0;
     }
 
     .write01 {
       margin-bottom: 2rem;
 
-      >h2 {
+      > h2 {
         font-size: 30px;
         font-weight: bold;
       }
@@ -83,34 +91,35 @@
       .rating {
         display: flex;
 
-        >div {
-          >svg {
+        > div {
+          > svg {
             width: 5rem;
             height: 7rem;
             cursor: pointer;
           }
         }
 
-        .star {}
+        .star {
+        }
       }
     }
 
     .write02 {
       margin-bottom: 2rem;
 
-      >h2 {
+      > h2 {
         font-size: 30px;
         font-weight: bold;
       }
 
-      >input {
+      > input {
         width: 90%;
         padding: 10px;
         border-radius: 8px;
         border: 1px solid #ccc;
       }
 
-      >p {
+      > p {
         width: 90%;
         font-size: 14px;
         text-align: right;
@@ -121,12 +130,12 @@
     .write03 {
       margin-bottom: 2rem;
 
-      >h2 {
+      > h2 {
         font-size: 30px;
         font-weight: bold;
       }
 
-      >input {
+      > input {
         width: 90%;
         height: 30vh;
         padding: 10px;
@@ -134,7 +143,7 @@
         border: 1px solid #ccc;
       }
 
-      >p {
+      > p {
         width: 90%;
         font-size: 14px;
         text-align: right;
@@ -145,7 +154,7 @@
     .write04 {
       margin-bottom: 2rem;
 
-      >h2 {
+      > h2 {
         font-size: 30px;
         font-weight: bold;
       }

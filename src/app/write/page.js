@@ -1,4 +1,4 @@
-'use client';
+"use client";
 
 import { useState } from "react";
 import Link from "next/link";
@@ -40,7 +40,17 @@ export default function WritePage() {
                 </div>
                 <div className="list_icon">
                   <p>리뷰 : 3개</p>
-                  <p>평점 : ★★★★☆</p>
+                  <p>
+                    평점 :{" "}
+                    {[...Array(5)].map((_, i) => (
+                      <FilledStar
+                        key={i}
+                        className="star-icon"
+                        color="#FFD700"
+                        size={48}
+                      />
+                    ))}
+                  </p>
                 </div>
               </div>
             </div>

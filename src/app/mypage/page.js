@@ -1,9 +1,8 @@
 "use client";
 
-import Footer from "@/components/Footer";
-import Header from "@/components/Header";
 import Link from "next/link";
 import React, { useState } from "react";
+import { HiChevronLeft } from "react-icons/hi";
 
 export default function Page() {
   const [isEditing, setIsEditing] = useState(false);
@@ -13,66 +12,32 @@ export default function Page() {
   const [newName, setNewName] = useState(name);
   const [password, setPassword] = useState("");
   const [newPassword, setNewPassword] = useState("");
-  const [activeTab, setActiveTab] = useState("내 정보"); // 현재 활성 탭 상태
 
   const handleButtonClick = () => {
     document.getElementById("imageUpload").click();
   };
 
-  const handleEditClick = () => {
-    setIsEditing(true);
-  };
-
-  const handleCancelClick = () => {
-    setIsEditing(false);
-    setNewEmail(email);
-    setNewName(name);
-    setPassword("");
-    setNewPassword("");
-  };
-
-  const handleSaveClick = () => {
-    setEmail(newEmail);
-    setName(newName);
-    setIsEditing(false);
-    // 비밀번호 업데이트 로직 추가 가능
+  const handleBtnClick = () => {
+    setIsEditing(!isEditing);
   };
 
   return (
     <>
       <div className="mypage_top"></div>
       <main className="mypage_info">
-        <div className="mypage_left">
-          <ul>
-            <li>
-              <Link href="/mypage" legacyBehavior>
-                <a
-                  className={activeTab === "내 정보" ? "active" : ""}
-                  onClick={() => setActiveTab("내 정보")}
-                >
-                  내 정보
-                </a>
-              </Link>
-            </li>
-          </ul>
-
-          <ul>
-            <li>
-              <Link href="/save" legacyBehavior>
-                <a
-                  className={activeTab === "찜 목록" ? "active" : ""}
-                  onClick={() => setActiveTab("찜 목록")}
-                >
-                  찜 목록
-                </a>
-              </Link>
-            </li>
-          </ul>
+        <div className="mypage_title">
+          <Link href={"/save"}>
+            <HiChevronLeft />
+          </Link>
+          <button onClick={handleBtnClick}>
+            {isEditing ? "완료" : "수정"}
+          </button>
         </div>
+
+        <h2>정보 변경</h2>
 
         <div className="mypage_right">
           <div className="mypage01">
-            <h2>내 프로필</h2>
             <div className="myprofile">
               <div className="image-container">
                 <img src="/img/02.png" alt="img" className="circle-image" />
@@ -151,24 +116,6 @@ export default function Page() {
                   </div>
                 </>
               )}
-              <div className="info-item">
-                {isEditing ? (
-                  <>
-                    <Link href="/" legacyBehavior>
-                      <button className="my_btn2" onClick={handleSaveClick}>
-                        저장
-                      </button>
-                    </Link>
-                    <button className="my_btn2" onClick={handleCancelClick}>
-                      취소
-                    </button>
-                  </>
-                ) : (
-                  <button className="my_btn2" onClick={handleEditClick}>
-                    수정
-                  </button>
-                )}
-              </div>
             </div>
           </div>
         </div>
