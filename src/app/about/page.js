@@ -1,4 +1,4 @@
-"use client";  // "use client" 지시문을 최상단에 위치시킵니다.
+"use client"; // "use client" 지시문을 최상단에 위치시킵니다.
 
 import Link from "next/link";
 import { useEffect, useState, useRef } from "react";
@@ -60,9 +60,10 @@ export default function AboutPage({ searchParams }) {
             trigger: midElement,
             start: "top top",
             end: () =>
-              `+=${midElement.offsetHeight -
-              rightElement.offsetHeight -
-              bottomMargin
+              `+=${
+                midElement.offsetHeight -
+                rightElement.offsetHeight -
+                bottomMargin
               }`,
             scrub: true,
             pin: false,
@@ -143,15 +144,17 @@ export default function AboutPage({ searchParams }) {
             {shop.image_urls && shop.image_urls.length > 1 ? (
               shop.image_urls.slice(1).map((url, index) => (
                 <div key={index} className="gallery-item">
-                  <img src={url && url.trim() ? url : "/img/no-image.png"} alt={`이미지사진${index + 2}`} />
+                  <img
+                    src={url && url.trim() ? url : "/img/no-image.png"}
+                    alt={`이미지사진${index + 2}`}
+                  />
                 </div>
               ))
             ) : (
-              <p>제공된 이미지가 없습니다</p>
+              <p></p>
             )}
           </div>
         </div>
-
 
         <div className="detail_mid">
           <div className="detail_left" ref={detailLeftRef}>
@@ -281,11 +284,12 @@ export default function AboutPage({ searchParams }) {
                 </div>
               </div>
               <p className="comment_text">
-                🥰늘 믿고 가는 네일 맛집입니다🥰
-                쨍한 블루 원컬러로 교체하였는데 역시 맘에 들어요.
-                받고 나서 일주일 정도 지났는데 처음이랑 다른 것도 없고요.
-                원컬러라서 더 인지가 되는 거 같은데 큐티클 쪽 라인부터 네일 바디 전체적으로 울퉁불툼하거나 급하게 발라진 느낌없이 완전 매끈해요... 👍👍
-                역시 기초공사가 짱짱한 근본 네일샵입니다
+                🥰늘 믿고 가는 네일 맛집입니다🥰 쨍한 블루 원컬러로 교체하였는데
+                역시 맘에 들어요. 받고 나서 일주일 정도 지났는데 처음이랑 다른
+                것도 없고요. 원컬러라서 더 인지가 되는 거 같은데 큐티클 쪽
+                라인부터 네일 바디 전체적으로 울퉁불툼하거나 급하게 발라진
+                느낌없이 완전 매끈해요... 👍👍 역시 기초공사가 짱짱한 근본
+                네일샵입니다
               </p>
             </div>
 
@@ -323,7 +327,10 @@ export default function AboutPage({ searchParams }) {
               </div>
 
               <p className="comment_text">
-                쏙오프 늘 손상없고 깔끔하게 케어해주셔서 넘 좋아요! 스킨톤의 깔끔한 네일하고 싶었는데 고민되는 컬러 두 가지 테스트로 발라보고 결정했어요~~ 언제나 깔끔하고 예쁜 젤네일 해주셔서 알잘딱깔센 미나쌤 늘 감사해요!
+                쏙오프 늘 손상없고 깔끔하게 케어해주셔서 넘 좋아요! 스킨톤의
+                깔끔한 네일하고 싶었는데 고민되는 컬러 두 가지 테스트로 발라보고
+                결정했어요~~ 언제나 깔끔하고 예쁜 젤네일 해주셔서 알잘딱깔센
+                미나쌤 늘 감사해요!
               </p>
             </div>
 
@@ -360,12 +367,12 @@ export default function AboutPage({ searchParams }) {
                 </div>
               </div>
               <p className="comment_text">
-                이달의컬러 중 하나!
-                민트색을하고싶다 얘기하니 어울리는컬러 응용해서 디자인해주셨어요. 곧 여름이라 너무잘어울리는거있죠♡.♡
+                이달의컬러 중 하나! 민트색을하고싶다 얘기하니 어울리는컬러
+                응용해서 디자인해주셨어요. 곧 여름이라 너무잘어울리는거있죠♡.♡
                 사장님이 친절하고 손도빨라서 약속시간도 늦지않고 좋았어요!!
-                심심한 리본모양에 스와로브스키가 똬악!!! 센스어쩔..ㅜㅜ
-                주차는 좀 힘들지만(저는 행정복지센터에 주차했어요) 수다도떨고 넘나힐링하고왔어요~~~
-                내돈내산 재방문예정이에유~~!!!!♡♡
+                심심한 리본모양에 스와로브스키가 똬악!!! 센스어쩔..ㅜㅜ 주차는
+                좀 힘들지만(저는 행정복지센터에 주차했어요) 수다도떨고
+                넘나힐링하고왔어요~~~ 내돈내산 재방문예정이에유~~!!!!♡♡
               </p>
             </div>
 
@@ -403,10 +410,8 @@ export default function AboutPage({ searchParams }) {
               </div>
 
               <p className="comment_text">
-                아이 네일아트 해주었어요.
-                손뜯는거 못하게 하려고 해줬는데
-                꽤 오래 가더라구요
-                시술이 꼼꼼하고 사장님 친절하세요
+                아이 네일아트 해주었어요. 손뜯는거 못하게 하려고 해줬는데 꽤
+                오래 가더라구요 시술이 꼼꼼하고 사장님 친절하세요
               </p>
             </div>
           </div>

@@ -1,104 +1,51 @@
 "use client";
 
-import React, { useEffect, useState, Suspense } from "react";
-import { useRouter, useSearchParams } from "next/navigation";
+import { useEffect, useState } from "react";
 import Link from "next/link";
 
-function ShopListComponent() {
+function List() {
   const [shops, setShops] = useState([]);
-  const [page, setPage] = useState(1);
+  const [error, setError] = useState(null);
   const [loading, setLoading] = useState(false);
   const [hasMore, setHasMore] = useState(true);
-  const router = useRouter();
-  const searchParams = useSearchParams();
-  const address = searchParams.get("address") || "";
-
-  const fetchShops = async (page) => {
-    setLoading(true);
-    try {
-      const response = await fetch(
-        `/api/shop_list?page=${page}&limit=20&address=${address}`
-      );
-      if (!response.ok) {
-        throw new Error("Network response was not ok");
-      }
-      const data = await response.json();
-      if (data.length < 20) {
-        setHasMore(false);
-      }
-      setShops((prevShops) => [...prevShops, ...data]);
-    } catch (error) {
-      console.error("Fetch error:", error);
-    }
-    setLoading(false);
-  };
+  const [page, setPage] = useState(0);
 
   useEffect(() => {
-    setShops([]);
-    setPage(1);
-    setHasMore(true);
-    fetchShops(1);
-  }, [address]);
+    fetchData(0); // 초기 로드
+  }, []);
+
+  async function fetchData(page) {
+    setLoading(true);
+    try {
+      const response = await fetch(`/api/shop/list?limit=20&skip=${page * 20}`); // limit과 skip을 사용하여 페이지네이션
+      if (!response.ok) {
+        throw new Error("데이터가 없습니다.");
+      }
+      const data = await response.json();
+      setShops((prevShops) => [...prevShops, ...data]);
+      setHasMore(data.length === 20); // 20개 미만이면 더 이상 데이터가 없음
+    } catch (error) {
+      setError(error);
+    } finally {
+      setLoading(false);
+    }
+  }
 
   const loadMore = () => {
-    if (!loading && hasMore) {
-      setPage((prevPage) => {
-        const newPage = prevPage + 1;
-        fetchShops(newPage);
-        return newPage;
-      });
-    }
+    setPage((prevPage) => {
+      const newPage = prevPage + 1;
+      fetchData(newPage);
+      return newPage;
+    });
   };
 
+  if (error) {
+    return <div>{error.message}</div>;
+  }
+
   return (
-    <>
-      <div className="ratelist">
-        평점 높은 네일샵
-      </div>
-      <div className="list">
-        {shops.slice(0, 6).map((shop) => (
-          <div className="main__list" key={`${shop._id}-rating`}>
-            <Link href={`/about?shop_id=${shop._id}`}>
-              <div className="list_item">
-                <img
-                  className="list_image"
-                  src={shop.image_urls[0]}
-                  alt={shop.title}
-                />
-                <div className="list_text">
-                  <span className="list_title">{shop.title}</span>
-                </div>
-              </div>
-            </Link>
-          </div>
-        ))}
-      </div>
-
-      <div className="reviewlist">
-        리뷰 많은 네일샵
-      </div>
-      <div className="list">
-        {shops.slice(0, 6).map((shop, i) => (
-          <div className="main__list" key={i}>
-            <Link href={`/about?shop_id=${shop._id}`}>
-              <div className="list_item">
-                <img
-                  className="list_image"
-                  src={shop.image_urls[0]}
-                  alt={shop.title}
-                />
-                <div className="list_text">
-                  <span className="list_title">{shop.title}</span>
-                </div>
-              </div>
-            </Link>
-          </div>
-        ))}
-      </div>
-
-      <div className="allist">
-        네일샵 전체 보기
-      </div>
+    <div className="list-container">
+      <div className="allist">네일샵 전체 보기</div>
       <div className="list">
         {shops.map((shop, i) => (
           <div className="main__list" key={i}>
@@ -106,11 +53,13 @@ function ShopListComponent() {
               <div className="list_item">
                 <img
                   className="list_image"
-                  src={shop.image_urls[0]}
-                  alt={shop.title}
+                  src={shop.image_urls[0] || "/default-image.jpg"}
+                  alt="img"
                 />
                 <div className="list_text">
                   <span className="list_title">{shop.title}</span>
+                  <span className="list_title">{shop.human_review}</span>
+                  <span className="list_title">{shop.blog_review}</span>
                 </div>
               </div>
             </Link>
@@ -124,14 +73,8 @@ function ShopListComponent() {
           </button>
         </div>
       )}
-    </>
+    </div>
   );
 }
 
-export default function List() {
-  return (
-    <Suspense fallback={<div>Loading...</div>}>
-      <ShopListComponent />
-    </Suspense>
-  );
-}
+export default List;
